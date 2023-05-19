@@ -1535,9 +1535,9 @@ body.scrolled .logo-wrapper-nav {
 }
 
 .job-fair-flex-col.title {
-  -webkit-flex-basis: 14%;
-  -ms-flex-preferred-size: 14%;
-  flex-basis: 14%;
+  -webkit-flex-basis: 18%;
+  -ms-flex-preferred-size: 18%;
+  flex-basis: 18%;
 }
 
 .job-fair-individ-wrapper {
@@ -6229,7 +6229,7 @@ body.scrolled .logo-wrapper-nav {
   }
 }
 
-.job-information-flex-col .w-button {
+.job-information-flex-col .w-button, .job-fair-flex-col .w-button {
   text-align: center;
   min-width: 0;
   padding-top: 15px;
