@@ -1378,9 +1378,14 @@ body.scrolled .logo-wrapper-nav {
   border-bottom: 1px solid #00173f;
 }
 
+.job-filter-toggle.job-board {
+  min-width: 260px;
+}
+
 .job-all-wrapper {
   margin-top: 60px;
   margin-left: 5vw;
+  min-height: 350px;
 }
 
 .job-individ-wrapper {
@@ -6224,3 +6229,8 @@ body.scrolled .logo-wrapper-nav {
   }
 }
 
+.job-information-flex-col .w-button {
+  text-align: center;
+  min-width: 0;
+  padding-top: 15px;
+}

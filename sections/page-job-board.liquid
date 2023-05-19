@@ -1,0 +1,219 @@
+<div class="hero-section">
+  <div class="hero-flex-row">
+    <div class="hero-img-wrapper job-board"></div>
+    <div class="hero-flex-col-right">
+      <div class="airplane-home-hero-wrapper"></div>
+      <h1>Job<span class="split-line-text">Board</span>
+      </h1>
+    </div>
+  </div>
+</div>
+<div class="news-section">
+  <div class="header-wrapper">
+    <div class="light-text blue-larger-text larger-spacing">I&#x27;m looking for:</div>
+  </div>
+  <div
+    data-current="Tab 1"
+    data-easing="ease"
+    data-duration-in="300"
+    data-duration-out="100"
+    class="job-tabs w-tabs">
+    <div class="tabs-menu w-tab-menu">
+      <a data-w-tab="Tab 1" class="tab-link-jobs w-inline-block w-tab-link w--current">
+        <div>Airline Jobs</div>
+      </a>
+      <a data-w-tab="Tab 2" class="tab-link-jobs w-inline-block w-tab-link">
+        <div>Other Aviation Jobs</div>
+      </a>
+    </div>
+    <div class="w-tab-content">
+      <div data-w-tab="Tab 1" class="tab-pane-jobs w-tab-pane w--tab-active">
+        <div class="header-wrapper">
+          <h5>Filter Airline Positions By:</h5>
+        </div>
+        <div class="job-filter-flex-row">
+          <div
+            data-delay="0"
+            data-hover="false"
+            class="filter-dropdown w-dropdown">
+            <div class="job-filter-toggle job-board w-dropdown-toggle">
+              <div class="w-icon-dropdown-toggle"></div>
+              <div class="job-filter-toggle__text">Type<span class="bright-blue-text">*</span>
+              </div>
+            </div>
+            <nav class="dropdown-filter-list w-dropdown-list">
+              <a
+                href="javascript:;"
+                class="dropdown-filter-link w-dropdown-link job-filter-link"
+                data-query="">All Jobs</a>
+              <a
+                href="javascript:;"
+                class="dropdown-filter-link w-dropdown-link job-filter-link"
+                data-query="{{ 'Entry Level Agriculture / Energy' | handleize }}">Entry Level Agriculture / Energy</a>
+              <a
+                href="javascript:;"
+                class="dropdown-filter-link w-dropdown-link job-filter-link"
+                data-query="{{ 'Entry Level Cargo' | handleize }}">Entry Level Cargo</a>
+              <a
+                href="javascript:;"
+                class="dropdown-filter-link w-dropdown-link job-filter-link"
+                data-query="{{ 'Entry Level Backcountry' | handleize }}">Entry Level Backcountry</a>
+              <a
+                href="javascript:;"
+                class="dropdown-filter-link w-dropdown-link job-filter-link"
+                data-query="{{ 'Regional Airline' | handleize }}">Regional Airline</a>
+              <a
+                href="javascript:;"
+                class="dropdown-filter-link w-dropdown-link job-filter-link"
+                data-query="{{ 'Major Airline' | handleize }}">Major Airline</a>
+              <a
+                href="javascript:;"
+                class="dropdown-filter-link w-dropdown-link job-filter-link"
+                data-query="{{ 'Major Cargo' | handleize }}">Major Cargo</a>
+              <a
+                href="javascript:;"
+                class="dropdown-filter-link w-dropdown-link job-filter-link"
+                data-query="{{ 'Charter / Corporate' | handleize }}">Charter / Corporate</a>
+              <a
+                href="javascript:;"
+                class="dropdown-filter-link w-dropdown-link job-filter-link"
+                data-query="{{ 'Low Cost Airline' | handleize }}">Low Cost Airline</a>
+              <a
+                href="javascript:;"
+                class="dropdown-filter-link w-dropdown-link job-filter-link"
+                data-query="{{ 'Low Cost Cargo' | handleize }}">Low Cost Cargo</a>
+            </nav>
+          </div>
+        </div>
+        <div class="job-all-wrapper">
+          {% for block in section.blocks %}
+            <div class="job-individ-wrapper" data-job-type="{{ block.settings.type | handleize }}">
+              <div class="job-logo-wrapper"><img
+                  src="{{ block.settings.logo | img_url: '450x' }}"
+                  loading="lazy"
+                  alt="United Airlines logo"
+                  class="job-logo-img"></div>
+              <div class="job-information-wrapper">
+                <div class="job-information-flex-row">
+                  <div class="job-information-flex-col col-8">
+                    <div>Job Type:
+                      <span class="light-text">{{ block.settings.type }}</span>
+                    </div>
+                    <div class="second-info-job-wrapper">
+                      {{ block.settings.description }}
+                    </div>
+                  </div>
+                  <div class="job-information-flex-col col-4">
+                    <a href="{{ block.settings.link }}" class="submit-button w-button">VIEW JOBS</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div data-w-tab="Tab 2" class="tab-pane-jobs w-tab-pane">
+        <div class="other-job-img-wrapper"><img
+            src="//cdn.shopify.com/s/files/1/0714/2922/6772/files/rss-feed.jpg?v=1674766851"
+            loading="lazy"
+            alt="RSS job feed placeholder image"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="sign-up-section">
+  <div class="sign-up-content-wrapper">
+    <h5>SIGN UP TO GET VALUABLE RESOURCES FROM PIC</h5>
+    <div class="form-block-sign-up w-form">
+      <form
+        id="email-form"
+        name="email-form"
+        data-name="Email Form"
+        method="get"
+        class="form-flex-row-sign-up"><input
+          type="email"
+          class="text-field-sign-up w-input"
+          maxlength="256"
+          name="email-2"
+          data-name="Email 2"
+          placeholder="Your Email Address"
+          id="email-2"
+          required=""><input
+          type="submit"
+          value="Get Started »"
+          data-wait="Please wait..."
+          class="submit-button w-button"></form>
+      <div class="w-form-done">
+        <div>Thank you! Your submission has been received!</div>
+      </div>
+      <div class="w-form-fail">
+        <div>Oops! Something went wrong while submitting the form.</div>
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Job Board",
+    "settings": [],
+    "blocks": [
+      {
+        "type": "job",
+        "name": "Job",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "logo",
+            "label": "Logo"
+          }, {
+            "type": "richtext",
+            "id": "description",
+            "label": "Description"
+          }, {
+            "type": "select",
+            "id": "type",
+            "options": [
+              {
+                "label": "Entry Level Agriculture / Energy",
+                "value": "Entry Level Agriculture / Energy"
+              },
+              {
+                "label": "Entry Level Cargo",
+                "value": "Entry Level Cargo"
+              },
+              {
+                "label": "Entry Level Backcountry",
+                "value": "Entry Level Backcountry"
+              },
+              {
+                "label": "Regional Airline",
+                "value": "Regional Airline"
+              }, {
+                "label": "Major Airline",
+                "value": "Major Airline"
+              }, {
+                "label": "Major Cargo",
+                "value": "Major Cargo"
+              }, {
+                "label": "Charter / Corporate",
+                "value": "Charter / Corporate"
+              }, {
+                "label": "Low Cost Airline",
+                "value": "Low Cost Airline"
+              }, {
+                "label": "Low Cost Cargo",
+                "value": "Low Cost Cargo"
+              }
+            ],
+            "label": "Select a Type",
+            "default": "Entry Level Agriculture / Energy"
+          }, {
+            "type": "url",
+            "id": "link",
+            "label": "Link"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

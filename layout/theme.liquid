@@ -109,7 +109,7 @@
       type="text/javascript"
       defer="defer"></script>
 
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
     {% comment %} Base JS stuff
     <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
     {% endcomment %}
@@ -117,7 +117,6 @@
     {{ content_for_header }}
 
     <link rel="stylesheet" href="https://use.typekit.net/wuv7bbu.css">
-
 
 
 
@@ -152,24 +151,25 @@
 
 
     <script>
-    // Get the body tag
+      // Get the body tag
       const body = document.querySelector('body');
 
-      // Listen for the scroll event
+// Listen for the scroll event
       window.addEventListener('scroll', function() {
-        // Calculate the percentage of page scrolled
+
+// Calculate the percentage of page scrolled
         const scrollPercent = (window.scrollY / document.body.scrollHeight) * 100;
 
-        // If the page is scrolled 2% down or more, add the "scrolled" class to the body tag
+// If the page is scrolled 2% down or more, add the "scrolled" class to the body tag
         if (scrollPercent >= 2) {
           body.classList.add('scrolled');
         } else {
           body.classList.remove('scrolled');
         }
       });
-
     </script>
 
 
   </body>
+  <script src="{{ 'custom.js' | asset_url }}" defer="defer"></script>
 </html>
