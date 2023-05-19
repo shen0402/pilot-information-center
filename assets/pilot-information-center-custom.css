@@ -401,6 +401,15 @@ a {
   margin-left: auto;
 }
 
+.tight-content-wrapper a {
+  color: #00173f;
+  text-decoration: none;
+}
+
+.tight-content-wrapper a:hover {
+  text-decoration: underline;
+}
+
 .top-inner-content {
   margin-top: 30px;
   margin-left: 30px;
