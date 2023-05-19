@@ -1,0 +1,93 @@
+<div class="footer">
+  <div class="footer-content-wrapper">
+    <div class="footer-flex-row-top">
+      <a href="/" class="footer-flex-col-logo w-inline-block"><img
+          src="//cdn.shopify.com/s/files/1/0714/2922/6772/files/pic-logo-wb.svg?v=1674766851"
+          loading="lazy"
+          alt="Pilot Information Center logo"></a>
+      <div class="footer-flex-col">
+        <div class="white-text larger-text small-margin-b">Become A Member</div>
+        <a
+          href="/pages/about-the-membership"
+          aria-current="page"
+          class="footer-link-block w-inline-block w--current">
+          <div>About the Membership</div>
+        </a>
+        {%unless customer%}
+        <a
+          data-w-id="2dbf2007-5a20-13e5-03ad-4675e9c14e48"
+          href="/account/login"
+          class="footer-link-block w-inline-block">
+          <div>Sign Up Now</div>
+        </a>
+        {%endunless%}
+        <a href="/pages/about-the-membership#faq" class="footer-link-block w-inline-block">
+          <div>FAQs</div>
+        </a>
+      </div>
+      <div class="footer-flex-col">
+        <div class="white-text larger-text small-margin-b">For PIC Members</div>
+        <a href="/pages/career-guidance" class="footer-link-block w-inline-block">
+          <div>Career Guidance</div>
+        </a>
+        <a href="/pages/job-board" class="footer-link-block w-inline-block">
+          <div>Job Board</div>
+        </a>
+        <a href="/pages/job-fairs-and-events" class="footer-link-block w-inline-block">
+          <div>Job Fairs &amp; Events</div>
+        </a>
+      </div>
+      <div class="footer-flex-col">
+        <div class="white-text larger-text small-margin-b">Member Services</div>
+
+        {% if customer %}
+          <a href="/account" class="footer-link-block w-inline-block">My Account</a>
+          {%else%}
+          <a href="/account" class="footer-link-block w-inline-block">Account Login</a>
+        {% endif %}
+
+
+        <a href="/account" class="footer-link-block w-inline-block">
+          <div>Account Settings</div>
+        </a>
+        <a href="#" class="footer-link-block w-inline-block">
+          <div>Contact Us</div>
+        </a>
+      </div>
+    </div>
+    <div class="bottom-flex-row">
+      <div class="bottom-flex-col">
+        <div class="contact-flex-row">
+          <div class="bright-blue-text light-text footer-blue-text">p</div>
+          <a href="tel:+17202221432" class="footer-link-block margin-l w-inline-block">
+            <div>(720) 222-1432</div>
+          </a>
+        </div>
+        <div class="contact-flex-row">
+          <div class="bright-blue-text light-text footer-blue-text">e</div>
+          <a href="mailto:info@pilotinformationcenter.com" class="footer-link-block margin-l w-inline-block">
+            <div>info@PilotInformationCenter.com</div>
+          </a>
+        </div>
+      </div>
+      <div class="bottom-flex-col right">
+        <a href="#" class="footer-link-block w-inline-block">
+          <div>Refund Policy</div>
+        </a>
+        <a href="#" class="footer-link-block w-inline-block">
+          <div>Terms of Service</div>
+        </a>
+      </div>
+    </div>
+    <div class="copywrite-flex-row">
+      <div class="white-text light-text">© 2022</div>
+      <div class="white-text light-text margin-horizontal">|</div>
+      <div class="white-text light-text">Designed by
+        <a
+          href="https://www.sidekickwebstudio.com/"
+          target="_blank"
+          class="copywrite-link">Sidekick Web Studio</a>
+      </div>
+    </div>
+  </div>
+</div>

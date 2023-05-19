@@ -1,0 +1,290 @@
+{% section 'jc-collection-section' %}{% comment %}
+
+  ////////////// Pagination and empty collection  ////////////////
+
+  {% if collection.products_count > 0 %}
+
+  {% paginate collection.products by 12 %}
+
+  {% for product in collection.products %}
+  {% assign price = product.price %}
+  {% assign compare_at_price = product.compare_at_price_max %}
+
+  {% if compare_at_price > price  %}
+  <div class=""><span style="text-decoration: line-through;">{{ compare_at_price | money }}</span> {{price | money }}</div>
+  {% else %}
+  <div class="">{{product.price | money }}</div>
+  {% endif %}
+
+
+  {% endfor %}
+
+  {% if paginate.pages > 1 %}
+  {% include 'pagination' %}
+  {% endif %}
+  {% endpaginate %}
+
+
+  {% else %}
+
+  <div class="empty-wrapper-collection">
+  <p class="empty-text-collection">No Matching Products</p>
+  </div>
+
+  {% endif %}
+
+
+
+  {% endcomment %}{% comment %}
+  ////////////// All Sorting Options ////////////////
+
+  <select id="sort-by" class="styled-select">
+  <option value="manual">Featured</option>
+  <option value="price-ascending">Price, low to high</option>
+  <option value="price-descending">Price, high to low</option>
+  <option value="title-ascending">Alphabetically, A-Z</option>
+  <option value="title-descending">Alphabetically, Z-A</option>
+  <option value="created-ascending">Date, old to new</option>
+  <option value="created-descending">Date, new to old</option>
+  <option value="best-selling">Best Selling</option>
+  </select>
+
+  {% endcomment %}{% comment %}
+  ////////////// Filtering By Tag  ////////////////
+
+  <select id="collection-sort" name="Color" class="form-input">
+  {% for tag in collection.all_tags %}
+  {% assign tag_handle = tag | handleize %}
+
+  <option value="blank" selected="true">Color</option>
+  {% if tag_handle == 'red' or
+  tag_handle == black' %}
+
+  {% if current_tags contains tag %}
+  <option value="{{tag_handle}}" selected="true">{{tag}}</option>
+  {% else %}
+  <option value="{{tag_handle}}">{{tag}}</option>
+  {% endif %}  
+
+  {% endif %}
+  {% endfor %}
+
+  </select>
+
+  {% endcomment %}<div class="hero-section"> <div class="hero-flex-row">
+    <div class="hero-img-wrapper products"></div>
+    <div class="hero-flex-col-right">
+      <h1>PIC<span class="split-line-text">Products</span>
+      </h1>
+    </div>
+  </div>
+</div>
+<div class="membership-section">
+  <div class="membership-p-wrapper"></div>
+  <div class="membership-options-wrapper">
+    <div class="product-wrapper">
+      <h3 class="center-mob">STUDY GUIDES</h3>
+      <div class="product-grid">
+        <a href="individual-product.html" class="product-grid-inner w-inline-block">
+          <div class="product-img-wrapper"><img
+              src="//cdn.shopify.com/s/files/1/0714/2922/6772/files/ChecklistForSuccess.jpg?v=1674766851"
+              loading="lazy"
+              alt="Checklist for Success Book Cover"
+              class="product-img"></div>
+          <div class="larger-text margin-b">Checklist For Success: A Pilot&#x27;s Guide To The Successful Airline Interview</div>
+          <div class="line-wrapper margin-b smaller center-land"><img
+              src="//cdn.shopify.com/s/files/1/0714/2922/6772/files/line-element.svg?v=1674766851"
+              loading="lazy"
+              alt=""></div>
+          <div class="light-text">$31.95</div>
+        </a>
+        <a href="individual-product.html" class="product-grid-inner w-inline-block">
+          <div class="product-img-wrapper"><img
+              src="//cdn.shopify.com/s/files/1/0714/2922/6772/files/AirlinePilotTechnicalInterviews.jpg?v=1674766851"
+              loading="lazy"
+              alt="Airline Pilot Technical Interviews Book Cover"
+              class="product-img"></div>
+          <div class="larger-text margin-b">Airline Pilot Technical Interviews: A Study Guide</div>
+          <div class="line-wrapper margin-b smaller center-land"><img
+              src="//cdn.shopify.com/s/files/1/0714/2922/6772/files/line-element.svg?v=1674766851"
+              loading="lazy"
+              alt=""></div>
+          <div class="light-text">$29.95</div>
+        </a>
+        <a href="individual-product.html" class="product-grid-inner w-inline-block">
+          <div class="product-img-wrapper"><img
+              src="//cdn.shopify.com/s/files/1/0714/2922/6772/files/MentalMathForPilots.jpg?v=1674766851"
+              loading="lazy"
+              alt="Mental Math for Pilots book cover"
+              class="product-img"></div>
+          <div class="larger-text margin-b">Mental Math For Pilots</div>
+          <div class="line-wrapper margin-b smaller center-land"><img
+              src="//cdn.shopify.com/s/files/1/0714/2922/6772/files/line-element.svg?v=1674766851"
+              loading="lazy"
+              alt=""></div>
+          <div class="light-text">$29.95</div>
+        </a>
+        <a href="individual-product.html" class="product-grid-inner w-inline-block">
+          <div class="product-img-wrapper"><img
+              src="//cdn.shopify.com/s/files/1/0714/2922/6772/files/ReportingClear.jpg?v=1674766851"
+              loading="lazy"
+              alt="Reporting Clear Book Cover"
+              class="product-img"></div>
+          <div class="larger-text margin-b">Reporting Clear?:<br>A Pilots Interview Guide To Background Checks &amp; Presentation Of Personal History</div>
+          <div class="line-wrapper margin-b smaller center-land"><img
+              src="//cdn.shopify.com/s/files/1/0714/2922/6772/files/line-element.svg?v=1674766851"
+              loading="lazy"
+              alt=""></div>
+          <div class="light-text">$19.95</div>
+        </a>
+        <a href="individual-product.html" class="product-grid-inner w-inline-block">
+          <div class="product-img-wrapper"><img
+              src="//cdn.shopify.com/s/files/1/0714/2922/6772/files/AMilitaryPilotsGuideToCivilianEmployment.jpg?v=1674766851"
+              loading="lazy"
+              alt="A Military Pilots Guide to Civilian Employment book cover"
+              class="product-img"></div>
+          <div class="larger-text margin-b">A Military Pilot&#x27;s Guide To Civilian Employment: The Checklist For A Successful Transition</div>
+          <div class="line-wrapper margin-b smaller center-land"><img
+              src="//cdn.shopify.com/s/files/1/0714/2922/6772/files/line-element.svg?v=1674766851"
+              loading="lazy"
+              alt=""></div>
+          <div class="light-text">$14.99</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="webinar-title-section">
+  <div class="webinar-background-img"></div>
+  <div class="web-flex-row">
+    <div class="trial-flex-col">
+      <h2 class="white-text margin-b larger-margin">WEBINARS</h2>
+      <p class="white-text margin-b">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.<br></p>
+      <div class="line-wrapper center-tab"><img
+          src="//cdn.shopify.com/s/files/1/0714/2922/6772/files/line-element.svg?v=1674766851"
+          loading="lazy"
+          alt=""></div>
+    </div>
+  </div>
+</div>
+<div class="webinar-flex-section">
+  <div class="webinar-flex-row">
+    <div class="webinar-flex-col">
+      <div class="webinar-flex-inner">
+        <div class="bright-blue-text light-text">Coming Up!</div>
+        <h4 class="white-text margin-b smaller-margin">Subject Of The Monthly Webinar Targeting A Key Interest</h4>
+        <div class="larger-text white-text light-text margin-b">Monthly Webinar - July</div>
+        <p class="white-text margin-b">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat ad minim veniam.</p>
+        <a href="#" class="bright-blue-link w-inline-block">
+          <div>Notify me! »</div>
+        </a>
+      </div>
+    </div>
+    <div class="webinar-flex-col-alt">
+      <div class="webinar-flex-inner right">
+        <div class="bright-blue-text light-text">Most Recent</div>
+        <h4 class="margin-b smaller-margin blue-text">Subject Of The Monthly Webinar Targeting A Key Interest</h4>
+        <div class="larger-text light-text margin-b">Monthly Webinar - June</div>
+        <p class="margin-b">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat ad minim veniam.</p>
+        <div class="flex-btm-webinar">
+          <div class="bright-blue-text light-text">1:03:37</div>
+          <div class="bright-blue-text light-text margin-horizontal">|</div>
+          <a href="#" class="bright-blue-link w-inline-block">
+            <div>Watch Webinar »</div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="archived-web-section">
+  <div class="content-wrapper">
+    <h6 class="margin-b center-tab">ARCHIVED WEBINARS</h6>
+    <div class="line-wrapper margin-b smaller center-tab"><img
+        src="//cdn.shopify.com/s/files/1/0714/2922/6772/files/line-element.svg?v=1674766851"
+        loading="lazy"
+        alt=""></div>
+    <div class="w-layout-grid archived-webinar-grid">
+      <div id="w-node-c7d11c8e-9c0e-3134-bafd-b003a9850713-dd2a2b07" class="archived-webinar-grid-inner">
+        <div class="larger-text">January 2022</div>
+        <div class="light-text">1:03:37</div>
+      </div>
+      <div id="w-node-ce2130ad-adca-3018-6f0e-66a71e3a8874-dd2a2b07" class="archived-webinar-grid-inner">
+        <div class="larger-text">February 2022</div>
+        <div class="light-text">1:03:37</div>
+      </div>
+      <div id="w-node-_324afbf8-b073-88c1-057b-566d88f5a427-dd2a2b07" class="archived-webinar-grid-inner">
+        <div class="larger-text">March 2022</div>
+        <div class="light-text">1:03:37</div>
+      </div>
+      <div id="w-node-a76c2e29-ab13-1e36-17ef-f0a08c17799c-dd2a2b07" class="archived-webinar-grid-inner">
+        <div class="larger-text">April 2022</div>
+        <div class="light-text">1:03:37</div>
+      </div>
+      <div id="w-node-_96465ee5-1261-49a2-ac7f-5c83179e00e7-dd2a2b07" class="archived-webinar-grid-inner">
+        <div class="larger-text">May 2022</div>
+        <div class="light-text">1:03:37</div>
+      </div>
+      <div id="w-node-_82751bbc-2710-e336-4c64-36e850ffab6e-dd2a2b07" class="archived-webinar-grid-inner">
+        <div class="larger-text">June 2022</div>
+        <div class="light-text">1:03:37</div>
+      </div>
+      <div id="w-node-b8198677-be7c-6e2c-8ab5-f0af6c587e07-dd2a2b07" class="archived-webinar-grid-inner">
+        <div class="larger-text">July 2022</div>
+        <div class="light-text">1:03:37</div>
+      </div>
+      <div id="w-node-e834bffd-85a0-3d9f-e4a2-6810264423dd-dd2a2b07" class="archived-webinar-grid-inner">
+        <div class="larger-text">August 2022</div>
+        <div class="light-text">1:03:37</div>
+      </div>
+      <div id="w-node-d7906cdd-a255-8838-1ed0-064baa363a31-dd2a2b07" class="archived-webinar-grid-inner">
+        <div class="larger-text">September 2022</div>
+        <div class="light-text">1:03:37</div>
+      </div>
+    </div>
+    <h6 class="margin-b larger-margin-b center-tab">2021</h6>
+    <div class="w-layout-grid archived-webinar-grid">
+      <div id="w-node-_4173ff25-b861-88c0-fcb8-741a16d9ff98-dd2a2b07" class="archived-webinar-grid-inner">
+        <div class="larger-text">January 2021</div>
+        <div class="light-text">1:03:37</div>
+      </div>
+      <div id="w-node-_4173ff25-b861-88c0-fcb8-741a16d9ff9d-dd2a2b07" class="archived-webinar-grid-inner">
+        <div class="larger-text">February 2021</div>
+        <div class="light-text">1:03:37</div>
+      </div>
+      <div id="w-node-_4173ff25-b861-88c0-fcb8-741a16d9ffa2-dd2a2b07" class="archived-webinar-grid-inner">
+        <div class="larger-text">March 2021</div>
+        <div class="light-text">1:03:37</div>
+      </div>
+      <div id="w-node-_4173ff25-b861-88c0-fcb8-741a16d9ffa7-dd2a2b07" class="archived-webinar-grid-inner">
+        <div class="larger-text">April 2021</div>
+        <div class="light-text">1:03:37</div>
+      </div>
+      <div id="w-node-_4173ff25-b861-88c0-fcb8-741a16d9ffac-dd2a2b07" class="archived-webinar-grid-inner">
+        <div class="larger-text">May 2021</div>
+        <div class="light-text">1:03:37</div>
+      </div>
+      <div id="w-node-_4173ff25-b861-88c0-fcb8-741a16d9ffb1-dd2a2b07" class="archived-webinar-grid-inner">
+        <div class="larger-text">June 2021</div>
+        <div class="light-text">1:03:37</div>
+      </div>
+      <div id="w-node-_4173ff25-b861-88c0-fcb8-741a16d9ffb6-dd2a2b07" class="archived-webinar-grid-inner">
+        <div class="larger-text">July 2021</div>
+        <div class="light-text">1:03:37</div>
+      </div>
+      <div id="w-node-_4173ff25-b861-88c0-fcb8-741a16d9ffbb-dd2a2b07" class="archived-webinar-grid-inner">
+        <div class="larger-text">August 2021</div>
+        <div class="light-text">1:03:37</div>
+      </div>
+    </div>
+  </div>
+  <div class="header-wrapper">
+    <a href="#" class="hat-link center blue-text light-text w-inline-block">
+      <div class="line-wrapper"><img
+          src="//cdn.shopify.com/s/files/1/0714/2922/6772/files/line-element.svg?v=1674766851"
+          loading="lazy"
+          alt=""></div>
+      <div>Load More »</div>
+    </a>
+  </div>
+</div>

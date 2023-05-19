@@ -1,0 +1,69 @@
+<div class="hero-login-section">
+    <div class="account-hero-flex-row">
+      <h1>Log In</h1>
+    </div>
+  </div>
+  
+  <div class="login-main-section">
+    <div class="login-form-wrapper">
+      <div class="w-form">
+  
+        <form id="login_form" method="post" action="/account/login">
+          <label for="customer_email" class="login-field-label">Email Address</label>
+          <input type="email" name="customer[email]" id="customer_email" class="text-field-form-popup w-input" required="required">
+          <label for="customer_password" class="login-field-label">Password</label>
+          <input type="password" name="customer[password]" id="customer_password" class="text-field-form-popup w-input" required="required">
+          <div class="submit-btn-wrapper">
+            <input type="submit" value="Log In" class="submit-button w-button">
+          </div>
+        </form>
+  
+        <div id="forgot_password_form" class="hidden">
+          <form id="forgot_password" method="post" action="/account/recover">
+            <label for="email" class="login-field-label">Email Address</label>
+            <input type="email" name="email" id="email" class="text-field-form-popup w-input" required="required">
+            <div class="submit-btn-wrapper">
+              <input type="submit" value="Reset Password" class="submit-button w-button">
+            </div>
+          </form>
+          <button id="close_forgot_password_form" class="close-btn submit-button w-button">Back to Login</button>
+        </div>
+  
+        <div class="button-wrapper login">
+            <a id="forgot_password_button" class="link-block blue margin-r w-inline-block">
+                <div>Forgot Password?</div>
+              </a>
+              <a href="/account/register" class="link-block blue w-inline-block">
+                <div>Sign Up »</div>
+              </a>
+
+        </div>
+  
+        <div class="w-form-done">
+          <div>Thank you! Your submission has been received!</div>
+        </div>
+        <div class="w-form-fail">
+          <div>Oops! Something went wrong while submitting the form.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    document.getElementById("forgot_password_button").addEventListener("click", function() {
+      document.getElementById("login_form").classList.add("hidden");
+      document.getElementById("forgot_password_form").classList.remove("hidden");
+    });
+  
+    document.getElementById("close_forgot_password_form").addEventListener("click", function() {
+      document.getElementById("forgot_password_form").classList.add("hidden");
+      document.getElementById("login_form").classList.remove("hidden");
+    });
+  </script>
+  
+  <style>
+    .hidden {
+      display: none;
+    }
+  </style>
+  

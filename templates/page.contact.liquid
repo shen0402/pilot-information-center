@@ -1,0 +1,40 @@
+{% form 'contact', id:"Contact-Form" %}
+  {% if form.posted_successfully? %}
+    <div class="jc-form-done">
+      <div>Thank you! Your submission has been received!</div>
+    </div>
+  {% else %}
+  <input type="hidden" name="contact[form-name]" value="General Contact Form">
+
+  <div class="form-group-contact">
+    <label for="name" class="form-label-contact">Your Name<span class="required">*</span></label>
+    <input type="text" class="form-input-contact w-input" maxlength="256" name="contact[Your-Name]" data-name="Name" id="Your-Name" required="">
+  </div>
+  
+  <select id="Question-About" name="contact[Question-About]" class="form-input-contact form-input-area-contact w-select">
+    <option value="blank">(Choose An Option)</option>
+    <option value="Imani-Products ">Imani Products</option>
+  </select>
+  {% endif %}
+{% endform %}
+
+<script type="text/javascript">
+    $(document).ready(function() { 
+
+      var url = window.location.href;
+
+      if ( url == 'https://www.domain.com/pages/contact?contact' ) {
+        $('html, body').animate({
+        scrollTop: $('#contact').offset().top-106
+        }, 1000);
+      }
+
+      if ( url == 'https://www.domain.com/pages/contact?contact_posted=true' ) {
+        $('html, body').animate({
+        scrollTop: $('#contact').offset().top-106
+        }, 1000);
+      }
+
+    });
+
+</script>

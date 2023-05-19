@@ -1,0 +1,565 @@
+<div class="types-section-financing">
+    <div class="types-financing-backgrndimg"></div>
+    <div class="header-wrapper">
+      <h5 class="white-text larger-h5">TYPES OF FINANCING OPTIONS:</h5>
+    </div>
+    <div class="w-layout-grid types-financing-grid">
+      <div id="w-node-_676ea4bd-307f-8b72-daa6-ea09dfaa8edf-c4b47619" class="types-financing-grid-inner">
+        <div class="line-wrapper margin-b"><img
+            src="//cdn.shopify.com/s/files/1/0714/2922/6772/files/line-element.svg?v=1674766851"
+            loading="lazy"
+            alt=""></div>
+        <h3 class="white-text">Scholarships</h3>
+        <p class="white-text margin-b larger-margin">Powered by
+          <a href="#" class="blue-to-white-link">Pilot Pipeline</a>
+        </p>
+        <p class="white-text margin-b">Use personalized filters to sort through hundreds of scholarships to find the ones that meet your specific situation.</p>
+      </div>
+      <div id="w-node-_675a43b4-889f-5edd-4063-c2e99b0e48c7-c4b47619" class="types-financing-grid-inner">
+        <div class="line-wrapper margin-b"><img
+            src="//cdn.shopify.com/s/files/1/0714/2922/6772/files/line-element.svg?v=1674766851"
+            loading="lazy"
+            alt=""></div>
+        <h3 class="white-text margin-b">Grants</h3>
+        <p class="white-text margin-b">Grants are an overlooked, yet powerful financing option. Don’t miss out - learn more about different grant opportunities.</p>
+      </div>
+      <div id="w-node-_0b592ee0-a9f8-9308-3ff7-b45163ab0ebb-c4b47619" class="types-financing-grid-inner">
+        <div class="line-wrapper margin-b"><img
+            src="//cdn.shopify.com/s/files/1/0714/2922/6772/files/line-element.svg?v=1674766851"
+            loading="lazy"
+            alt=""></div>
+        <h3 class="white-text margin-b">Loans</h3>
+        <p class="white-text margin-b">There are many lenders that provide affordable and flexible financing options. Check out our trusted lenders to see if a flight training loan is right for you!</p>
+      </div>
+    </div>
+    <div
+      id="w-node-_92474ba0-2b29-f9cc-d16b-3df73a66a391-c4b47619"
+      data-current="Tab 1"
+      data-easing="ease"
+      data-duration-in="300"
+      data-duration-out="100"
+      class="w-tabs">
+      <div class="tabs-financing-grid w-tab-menu">
+        <a data-w-tab="Tab 1" class="btn-wrapper-types w-inline-block w-tab-link w--current">
+          <div>View Scholarship Options »</div>
+        </a>
+        <a data-w-tab="Tab 2" class="btn-wrapper-types w-inline-block w-tab-link">
+          <div>View Grant Options »</div>
+        </a>
+        <a data-w-tab="Tab 3" class="btn-wrapper-types w-inline-block w-tab-link">
+          <div>View Loan Options »</div>
+        </a>
+      </div>
+      <div class="w-tab-content">
+        <div data-w-tab="Tab 1" class="tab-pane-financing w-tab-pane w--tab-active">
+          <div class="scholarship-section">
+            <div class="content-wrapper">
+              <div class="header-wrapper">
+                <h5 class="larger-h5">AVAILABLE SCHOLARSHIPS INCLUDE:</h5>
+              </div>
+              <div class="scholarships-wrapper-all">
+
+
+
+{% for block in section.blocks %}
+
+    <div class="scholarship-ind">
+        <div class="schol-information-flex-row">
+          <div class="scholarship-main-flex-col">
+            <h4 class="bold-text blue-text">{{block.settings.title}}</h4>
+            <p class="p-smaller">{{block.settings.description}}</p>
+            <a href="{{block.settings.link}}" class="scholarship-link w-inline-block">
+              <div>{{block.settings.link_text}} »</div>
+            </a>
+          </div>
+          <div class="schol-inner-info-flex">
+            <div class="schol-flex-col">
+              <div>Donor:</div>
+              <div class="light-text">{{block.settings.donor_name}}</div>
+              <div class="second-info-job-wrapper">
+                <div>Award:</div>
+                <div class="light-text">{{block.settings.award}}</div>
+              </div>
+            </div>
+            <div class="schol-flex-col">
+              <div>Certificate or Rating</div>
+              <div class="light-text">{{block.settings.certification}}</div>
+            </div>
+            <div class="schol-flex-col">
+              <div>Additional Criteria:</div>
+              <ul role="list">
+                {%if block.settings.criteria_1%}
+                <li class="schol-list-item">
+                  <div class="light-text">{{block.settings.criteria_1}}</div>
+                </li>
+                {%endif%}
+                {%if block.settings.criteria_2%}
+                <li class="schol-list-item">
+                  <div class="light-text">{{block.settings.criteria_2}}</div>
+                </li>
+                {%endif%}
+                {%if block.settings.criteria_3%}
+                <li class="schol-list-item">
+                    <div class="light-text">{{block.settings.criteria_3}}</div>
+                  </li>
+                  {%endif%}
+                  {%if block.settings.criteria_4%}
+                  <li class="schol-list-item">
+                    <div class="light-text">{{block.settings.criteria_4}}</div>
+                  </li>
+                  {%endif%}
+                  {%if block.settings.criteria_5%}
+                  <li class="schol-list-item">
+                    <div class="light-text">{{block.settings.criteria_5}}</div>
+                  </li>
+                  {%endif%}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+{% endfor %}
+
+
+                <div class="scholarship-ind">
+                  <div class="schol-information-flex-row">
+                    <div class="scholarship-main-flex-col">
+                      <h4 class="bold-text blue-text">The Breitling Aviation Scholarship</h4>
+                      <p class="p-smaller">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+                      <a href="#" class="scholarship-link w-inline-block">
+                        <div>apply here »</div>
+                      </a>
+                    </div>
+                    <div class="schol-inner-info-flex">
+                      <div class="schol-flex-col">
+                        <div>Donor:</div>
+                        <div class="light-text">Breitling</div>
+                        <div class="second-info-job-wrapper">
+                          <div>Award:</div>
+                          <div class="light-text">$10,000</div>
+                        </div>
+                      </div>
+                      <div class="schol-flex-col">
+                        <div>Certificate or Rating</div>
+                        <div class="light-text">Primary certification (Sport, Recreational or Private Pilot certificate)</div>
+                      </div>
+                      <div class="schol-flex-col">
+                        <div>Additional Criteria:</div>
+                        <ul role="list">
+                          <li class="schol-list-item">
+                            <div class="light-text">Must be 16 years at the time of application submission</div>
+                          </li>
+                          <li class="schol-list-item">
+                            <div class="light-text">Must hold a student pilot certificate</div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+
+                <div class="scholarship-ind">
+                  <div class="schol-information-flex-row">
+                    <div class="scholarship-main-flex-col">
+                      <h4 class="bold-text blue-text">AOPA Foundation Scholarship</h4>
+                      <p class="p-smaller">Miscellaneous donations for scholarships are combined and awarded to help members reach their aviation goals.</p>
+                      <a href="#" class="scholarship-link w-inline-block">
+                        <div>apply here »</div>
+                      </a>
+                    </div>
+                    <div class="schol-inner-info-flex">
+                      <div class="schol-flex-col">
+                        <div>Donor:</div>
+                        <div class="light-text">AOPA Foundation Donations</div>
+                        <div class="second-info-job-wrapper">
+                          <div>Award:</div>
+                          <div class="light-text">$2,500 and up: the number of awards will vary</div>
+                        </div>
+                      </div>
+                      <div class="schol-flex-col">
+                        <div>Certificate or Rating</div>
+                        <div class="light-text">Primary Certification (Sport, Recreational or Private Pilot certificate)</div>
+                      </div>
+                      <div class="schol-flex-col">
+                        <div>Additional Criteria:</div>
+                        <ul role="list">
+                          <li class="schol-list-item">
+                            <div class="light-text">Must be 16 years at the time of application submission</div>
+                          </li>
+                          <li class="schol-list-item">
+                            <div class="light-text">Must hold a student pilot certificate</div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="scholarship-ind">
+                  <div class="schol-information-flex-row">
+                    <div class="scholarship-main-flex-col">
+                      <h4 class="bold-text blue-text">The A &amp; J Scholarship</h4>
+                      <p class="p-smaller">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+                      <a href="#" class="scholarship-link w-inline-block">
+                        <div>apply here »</div>
+                      </a>
+                    </div>
+                    <div class="schol-inner-info-flex">
+                      <div class="schol-flex-col">
+                        <div>Donor:</div>
+                        <div class="light-text">Allan and Jill Eckmann</div>
+                        <div class="second-info-job-wrapper">
+                          <div>Award:</div>
+                          <div class="light-text">$5,000</div>
+                        </div>
+                      </div>
+                      <div class="schol-flex-col">
+                        <div>Certificate or Rating</div>
+                        <div class="light-text">Private Pilot certificate</div>
+                      </div>
+                      <div class="schol-flex-col">
+                        <div>Additional Criteria:</div>
+                        <ul role="list">
+                          <li class="schol-list-item">
+                            <div class="light-text">Must be 16 years at the time of application submission</div>
+                          </li>
+                          <li class="schol-list-item">
+                            <div class="light-text">Must be training at an accredited flight school (not with a freelance flight instructor)</div>
+                          </li>
+                          <li class="schol-list-item">
+                            <div class="light-text">Preference given to females of color</div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="scholarship-ind">
+                  <div class="schol-information-flex-row">
+                    <div class="scholarship-main-flex-col">
+                      <h4 class="bold-text blue-text">The Breitling Aviation Scholarship</h4>
+                      <p class="p-smaller">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+                      <a href="#" class="scholarship-link w-inline-block">
+                        <div>apply here »</div>
+                      </a>
+                    </div>
+                    <div class="schol-inner-info-flex">
+                      <div class="schol-flex-col">
+                        <div>Donor:</div>
+                        <div class="light-text">Breitling</div>
+                        <div class="second-info-job-wrapper">
+                          <div>Award:</div>
+                          <div class="light-text">$10,000</div>
+                        </div>
+                      </div>
+                      <div class="schol-flex-col">
+                        <div>Certificate or Rating</div>
+                        <div class="light-text">Primary certification (Sport, Recreational or Private Pilot certificate)</div>
+                      </div>
+                      <div class="schol-flex-col">
+                        <div>Additional Criteria:</div>
+                        <ul role="list">
+                          <li class="schol-list-item">
+                            <div class="light-text">Must be 16 years at the time of application submission</div>
+                          </li>
+                          <li class="schol-list-item">
+                            <div class="light-text">Must hold a student pilot certificate</div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="scholarship-ind last">
+                  <div class="schol-information-flex-row">
+                    <div class="scholarship-main-flex-col">
+                      <h4 class="bold-text blue-text">AOPA Foundation Scholarship</h4>
+                      <p class="p-smaller">Miscellaneous donations for scholarships are combined and awarded to help members reach their aviation goals.</p>
+                      <a href="#" class="scholarship-link w-inline-block">
+                        <div>apply here »</div>
+                      </a>
+                    </div>
+                    <div class="schol-inner-info-flex">
+                      <div class="schol-flex-col">
+                        <div>Donor:</div>
+                        <div class="light-text">AOPA Foundation Donations</div>
+                        <div class="second-info-job-wrapper">
+                          <div>Award:</div>
+                          <div class="light-text">$2,500 and up: the number of awards will vary</div>
+                        </div>
+                      </div>
+                      <div class="schol-flex-col">
+                        <div>Certificate or Rating</div>
+                        <div class="light-text">Primary Certification (Sport, Recreational or Private Pilot certificate)</div>
+                      </div>
+                      <div class="schol-flex-col">
+                        <div>Additional Criteria:</div>
+                        <ul role="list">
+                          <li class="schol-list-item">
+                            <div class="light-text">Must be 16 years at the time of application submission</div>
+                          </li>
+                          <li class="schol-list-item">
+                            <div class="light-text">Must hold a student pilot certificate</div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-w-tab="Tab 2" class="tab-pane-financing w-tab-pane">
+          <div class="scholarship-section">
+            <div class="content-wrapper">
+              <div class="header-wrapper">
+                <h5 class="larger-h5">AVAILABLE GRANTS INCLUDE:</h5>
+              </div>
+              <div class="scholarships-wrapper-all">
+                <div class="scholarship-ind">
+                  <div class="schol-information-flex-row">
+                    <div class="scholarship-main-flex-col">
+                      <h4 class="bold-text blue-text">The Breitling Excellence Grant</h4>
+                      <p class="p-smaller">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+                      <a href="#" class="scholarship-link w-inline-block">
+                        <div>apply here »</div>
+                      </a>
+                    </div>
+                    <div class="schol-inner-info-flex">
+                      <div class="schol-flex-col">
+                        <div>Donor:</div>
+                        <div class="light-text">Breitling</div>
+                        <div class="second-info-job-wrapper">
+                          <div>Grant Amount:</div>
+                          <div class="light-text">$10,000</div>
+                        </div>
+                      </div>
+                      <div class="schol-flex-col">
+                        <div>Certificate or Rating</div>
+                        <div class="light-text">Primary certification (Sport, Recreational or Private Pilot certificate)</div>
+                      </div>
+                      <div class="schol-flex-col">
+                        <div>Additional Criteria:</div>
+                        <ul role="list">
+                          <li class="schol-list-item">
+                            <div class="light-text">Must be 16 years at the time of application submission</div>
+                          </li>
+                          <li class="schol-list-item">
+                            <div class="light-text">Must hold a student pilot certificate</div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="scholarship-ind">
+                  <div class="schol-information-flex-row">
+                    <div class="scholarship-main-flex-col">
+                      <h4 class="bold-text blue-text">United Airlines Grant</h4>
+                      <p class="p-smaller">Miscellaneous donations for scholarships are combined and awarded to help members reach their aviation goals.</p>
+                      <a href="#" class="scholarship-link w-inline-block">
+                        <div>apply here »</div>
+                      </a>
+                    </div>
+                    <div class="schol-inner-info-flex">
+                      <div class="schol-flex-col">
+                        <div>Donor:</div>
+                        <div class="light-text">United Airlines</div>
+                        <div class="second-info-job-wrapper">
+                          <div>Grant Amount:</div>
+                          <div class="light-text">$2,500 and up: the number of awards will vary</div>
+                        </div>
+                      </div>
+                      <div class="schol-flex-col">
+                        <div>Certificate or Rating</div>
+                        <div class="light-text">Primary Certification (Sport, Recreational or Private Pilot certificate)</div>
+                      </div>
+                      <div class="schol-flex-col">
+                        <div>Additional Criteria:</div>
+                        <ul role="list">
+                          <li class="schol-list-item">
+                            <div class="light-text">Must be 16 years at the time of application submission</div>
+                          </li>
+                          <li class="schol-list-item">
+                            <div class="light-text">Must hold a student pilot certificate</div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-w-tab="Tab 3" class="tab-pane-financing w-tab-pane">
+          <div class="scholarship-section">
+            <div class="content-wrapper">
+              <div class="header-wrapper">
+                <h5 class="larger-h5">AVAILABLE LOANS INCLUDE:</h5>
+              </div>
+              <div class="scholarships-wrapper-all">
+                <div class="scholarship-ind">
+                  <div class="schol-information-flex-row">
+                    <div class="scholarship-main-flex-col">
+                      <h4 class="bold-text blue-text">The Breitling Aviation Loan</h4>
+                      <p class="p-smaller">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+                      <a href="#" class="scholarship-link w-inline-block">
+                        <div>apply here »</div>
+                      </a>
+                    </div>
+                    <div class="schol-inner-info-flex">
+                      <div class="schol-flex-col">
+                        <div>Loaner:</div>
+                        <div class="light-text">Breitling</div>
+                        <div class="second-info-job-wrapper">
+                          <div>Loan Amount:</div>
+                          <div class="light-text">$10,000</div>
+                        </div>
+                      </div>
+                      <div class="schol-flex-col">
+                        <div>Certificate or Rating</div>
+                        <div class="light-text">Primary certification (Sport, Recreational or Private Pilot certificate)</div>
+                      </div>
+                      <div class="schol-flex-col">
+                        <div>Additional Criteria:</div>
+                        <ul role="list">
+                          <li class="schol-list-item">
+                            <div class="light-text">Must be 16 years at the time of application submission</div>
+                          </li>
+                          <li class="schol-list-item">
+                            <div class="light-text">Must hold a student pilot certificate</div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="scholarship-ind">
+                  <div class="schol-information-flex-row">
+                    <div class="scholarship-main-flex-col">
+                      <h4 class="bold-text blue-text">AOPA Foundation Loan</h4>
+                      <p class="p-smaller">Miscellaneous donations for scholarships are combined and awarded to help members reach their aviation goals.</p>
+                      <a href="#" class="scholarship-link w-inline-block">
+                        <div>apply here »</div>
+                      </a>
+                    </div>
+                    <div class="schol-inner-info-flex">
+                      <div class="schol-flex-col">
+                        <div>Loaner:</div>
+                        <div class="light-text">AOPA Foundation Donations</div>
+                        <div class="second-info-job-wrapper">
+                          <div>Loan Amount:</div>
+                          <div class="light-text">$2,500 and up: the number of awards will vary</div>
+                        </div>
+                      </div>
+                      <div class="schol-flex-col">
+                        <div>Certificate or Rating</div>
+                        <div class="light-text">Primary Certification (Sport, Recreational or Private Pilot certificate)</div>
+                      </div>
+                      <div class="schol-flex-col">
+                        <div>Additional Criteria:</div>
+                        <ul role="list">
+                          <li class="schol-list-item">
+                            <div class="light-text">Must be 16 years at the time of application submission</div>
+                          </li>
+                          <li class="schol-list-item">
+                            <div class="light-text">Must hold a student pilot certificate</div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="scholarship-ind">
+                  <div class="schol-information-flex-row">
+                    <div class="scholarship-main-flex-col">
+                      <h4 class="bold-text blue-text">The A &amp; J Loan</h4>
+                      <p class="p-smaller">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+                      <a href="#" class="scholarship-link w-inline-block">
+                        <div>apply here »</div>
+                      </a>
+                    </div>
+                    <div class="schol-inner-info-flex">
+                      <div class="schol-flex-col">
+                        <div>Loaner:</div>
+                        <div class="light-text">Allan and Jill Eckmann</div>
+                        <div class="second-info-job-wrapper">
+                          <div>Loan Amount:</div>
+                          <div class="light-text">$10,000</div>
+                        </div>
+                      </div>
+                      <div class="schol-flex-col">
+                        <div>Certificate or Rating</div>
+                        <div class="light-text">Private Pilot certificate</div>
+                      </div>
+                      <div class="schol-flex-col">
+                        <div>Additional Criteria:</div>
+                        <ul role="list">
+                          <li class="schol-list-item">
+                            <div class="light-text">Must be 16 years at the time of application submission</div>
+                          </li>
+                          <li class="schol-list-item">
+                            <div class="light-text">Must be training at an accredited flight school (not with a freelance flight instructor)</div>
+                          </li>
+                          <li class="schol-list-item">
+                            <div class="light-text">Preference given to females of color</div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+  {% schema %}
+{
+  "name": "Financing Options" ,
+  "settings": [
+      {
+          "type": "text",
+          "id": "heading_text",
+          "default": "UPCOMING EVENTS",
+          "label": "Heading Text"
+      }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Scholarships",
+      "settings": [
+        {
+          "type": "text",
+          "id": "event_date",
+          "label": "Event Date"
+        },
+        {
+          "label": "Tab Menu Heading",
+          "id": "event_title",
+          "type": "text"
+        },
+        {
+          "label": "Tab Content Heading",
+          "id": "tab_content_heading",
+          "type": "text"
+        }
+
+      ]
+    }
+  ]
+}
+{% endschema %}

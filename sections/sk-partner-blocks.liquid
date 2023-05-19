@@ -1,0 +1,105 @@
+<div class="partners-section">
+    <div class="vetted-partner-wrapper">
+
+
+{% for block in section.blocks %}
+
+
+    <div class="partner-individ-wrapper">
+        <div class="partner-logo-wrapper"><img
+            src="{{block.settings.logo | image_url }}"
+            loading="lazy"
+            alt="Cage Marshall logo"
+            class="partner-logo-img"></div>
+        <div class="partner-information-wrapper">
+          <div class="partner-information-flex-row">
+            <div id="w-node-fee12231-1d8e-7e16-ed0a-31cb6571dec9-3739c18e" class="partner-information-flex-col main">
+              <div class="light-text">{{block.settings.body}}</div>
+            </div>
+            <div class="partner-information-flex-col">
+              <div class="margin-b">Specialties:</div>
+              <div class="light-text margin-b smaller-margin">{{block.settings.specialties}}</div>
+
+            </div>
+            <div class="partner-information-flex-col">
+              <div class="margin-b">Connect:</div>
+              <a
+                href="{{block.settings.website}}"
+                target="_blank"
+                class="blue-to-darkblue-link margin-b w-inline-block">
+                <div class="light-text">{{block.settings.website}}</div>
+              </a>
+              <a href="tel:{{block.settings.phone}}" class="blue-to-darkblue-link margin-b w-inline-block">
+                <div class="light-text">{{block.settings.phone}}</div>
+              </a>
+              <a href="mailto:{{block.settings.email}}" class="blue-to-darkblue-link margin-b w-inline-block">
+                <div class="light-text">{{block.settings.email}}</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+{% endfor %}
+
+
+
+      
+
+
+    </div>
+  </div>
+
+
+
+
+
+
+  
+
+  {% schema %}
+{
+  "name": "Partners" ,
+  "settings": [
+
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Scholarship Block",
+      "settings": [
+        {
+            "id": "logo",
+            "type": "image_picker",
+            "label": "Logo"
+          },
+        {
+          "id": "body",
+          "type": "text",
+          "label": "Body Text"
+        },
+        {
+          "id": "specialties",
+          "type": "textarea",
+          "label": "Specialties"
+        },
+        {
+          "id": "website",
+          "type": "url",
+          "label": "Website"
+        },
+        {
+          "id": "phone",
+          "type": "text",
+          "label": "Phone Number"
+        },
+        {
+          "id": "email",
+          "type": "text",
+          "label": "Email"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

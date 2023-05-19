@@ -1,0 +1,155 @@
+
+<div class="header-wrapper">
+  <h5 class="larger-h5">{{section.settings.header_text}}</h5>
+</div>
+<div class="scholarships-wrapper-all">
+
+{% for block in section.blocks %}
+
+  <div class="scholarship-ind">
+      <div class="schol-information-flex-row">
+        <div class="scholarship-main-flex-col">
+          <h4 class="bold-text blue-text">{{block.settings.title}}</h4>
+          <p class="p-smaller">{{block.settings.description}}</p>
+          {% if block.settings.link_text != blank %}
+            <a href="{{block.settings.link}}" class="scholarship-link w-inline-block">
+              <div>{{block.settings.link_text}} »</div>
+            </a>
+          {% endif %}
+        </div>
+        <div class="schol-inner-info-flex">
+          <div class="schol-flex-col">
+            <div>Donor:</div>
+            <div class="light-text">{{block.settings.donor_name}}</div>
+            <div class="second-info-job-wrapper">
+              <div>Award:</div>
+              <div class="light-text">{{block.settings.award}}</div>
+            </div>
+          </div>
+          <div class="schol-flex-col">
+            <div>Certificate or Rating</div>
+            <div class="light-text">{{block.settings.certification}}</div>
+          </div>
+          <div class="schol-flex-col">
+            <div>Additional Criteria:</div>
+            <ul role="list">
+              {%if block.settings.criteria_1 != blank%}
+              <li class="schol-list-item">
+                <div class="light-text">{{block.settings.criteria_1}}</div>
+              </li>
+              {%endif%}
+              {%if block.settings.criteria_2 != blank%}
+              <li class="schol-list-item">
+                <div class="light-text">{{block.settings.criteria_2}}</div>
+              </li>
+              {%endif%}
+              {%if block.settings.criteria_3 != blank%}
+              <li class="schol-list-item">
+                  <div class="light-text">{{block.settings.criteria_3}}</div>
+                </li>
+                {%endif%}
+                {%if block.settings.criteria_4 != blank%}
+                <li class="schol-list-item">
+                  <div class="light-text">{{block.settings.criteria_4}}</div>
+                </li>
+                {%endif%}
+                {%if block.settings.criteria_5 != blank%}
+                <li class="schol-list-item">
+                  <div class="light-text">{{block.settings.criteria_5}}</div>
+                </li>
+                {%endif%}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+{% endfor %}
+</div>
+
+
+
+
+
+  {% schema %}
+{
+  "name": "Financing Options" ,
+  "settings": [
+      {
+          "type": "text",
+          "id": "header_text",
+          "label": "Heading Text",
+          "default": "AVAILABLE SCHOLARSHIPS INCLUDE:"
+      }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Scholarship Block",
+      "settings": [
+        {
+          "id": "title",
+          "type": "text",
+          "label": "Title"
+        },
+        {
+          "id": "description",
+          "type": "textarea",
+          "label": "Description"
+        },
+        {
+          "id": "link",
+          "type": "url",
+          "label": "Link"
+        },
+        {
+          "id": "link_text",
+          "type": "text",
+          "label": "Link Text"
+        },
+        {
+          "id": "donor_name",
+          "type": "text",
+          "label": "Donor Name"
+        },
+        {
+          "id": "award",
+          "type": "text",
+          "label": "Award"
+        },
+        {
+          "id": "certification",
+          "type": "text",
+          "label": "Certification or Rating"
+        },
+        {
+          "id": "criteria_1",
+          "type": "text",
+          "label": "Criteria 1"
+        },
+        {
+          "id": "criteria_2",
+          "type": "text",
+          "label": "Criteria 2"
+        },
+        {
+          "id": "criteria_3",
+          "type": "text",
+          "label": "Criteria 3"
+        },
+        {
+          "id": "criteria_4",
+          "type": "text",
+          "label": "Criteria 4"
+        },
+        {
+          "id": "criteria_5",
+          "type": "text",
+          "label": "Criteria 5"
+        }
+
+      ]
+    }
+  ]
+}
+{% endschema %}

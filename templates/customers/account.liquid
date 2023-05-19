@@ -1,0 +1,423 @@
+{% section 'jc-account-page' %}{% comment %} /////// Customer Object ///////
+
+  {{customer.first_name}}
+  {{customer.last_name}}
+  {{customer.name}}
+  {{customer.email}}
+  {% endcomment %}{% comment %} /////// Customer Addresses ///////
+  <div class="">
+
+  {% for address in customer.addresses %}
+  <p>{{ address.street }}</p>
+  {% if address.address2 %}
+  <p>{{ address.address2 }}</p>
+  {% endif %}
+  <p>{{ address.city }} {{ address.province_code }}, {{address.zip}}</p>
+  {% if address.phone %}
+  <p>{{ address.phone }}</p>
+  {% endif %}
+
+  {% endfor %}
+
+  </div>
+  {% endcomment %}{% comment %} /////// Customer Orders ///////
+
+
+  {% paginate customer.orders by 20 %}
+
+  {% if customer.orders.size != 0 %}
+
+  <div class="heading-flex-row-account-page">
+  <div class="flex-col-account-page-1">
+  <div class="heading-flex-text-account-page">Order</div>
+  </div>
+  <div class="flex-col-account-page-2">
+  <div class="heading-flex-text-account-page">Date</div>
+  </div>
+  <div class="flex-col-account-page-3">
+  <div class="heading-flex-text-account-page">Payment Status</div>
+  </div>
+  <div class="flex-col-account-page-4">
+  <div class="heading-flex-text-account-page">Fulfillment Status</div>
+  </div>
+  <div class="flex-col-account-page-5">
+  <div class="heading-flex-text-account-page">Total</div>
+  </div>
+  </div>
+
+  {% for order in customer.orders %}
+
+
+  <div class="flex-row-account-page">
+  <div class="flex-col-account-page-1">
+  <a href="{{order.customer_url}}" class="flex-col-link-block-account-page w-inline-block">
+  <div>{{order.name}}</div>
+  </a>
+  </div>
+  <div class="flex-col-account-page-2">
+  <div class="flex-col-text-account-page">{{ order.created_at | date: format: 'date' }}</div>
+  </div>
+  <div class="flex-col-account-page-3">
+  <div class="flex-col-text-account-page">{{order.financial_status}}</div>
+  </div>
+  <div class="flex-col-account-page-4">
+  <div class="flex-col-text-account-page">{{order.fulfillment_status}}</div>
+  </div>
+  <div class="flex-col-account-page-5">
+  <div class="flex-col-text-account-page">{{ order.total_price | money }}</div>
+  </div>
+  </div>	
+
+
+
+  {% endfor %}
+  {% else %}   
+
+  <div class="jc-account-page-empty-wrapper">
+  <p class="jc-account-page-empty-text">You haven't placed any orders yet</p>
+  </div>
+  {% endif %}
+  {% if paginate.pages > 1 %}
+  {% include 'pagination' %}
+  {% endif %}
+  {% endpaginate %}
+
+  {% endcomment %}
+
+
+  <div class="hero-account-section"> <div class="account-hero-flex-row">
+    {% if customer.first_name %}
+      <h1>Welcome, {{ customer.first_name }}!</h1>
+      {%else%}
+      <h1>Welcome!</h1>
+    {% endif %}
+    
+
+  </div>
+</div>
+<div class="account-main-section">
+  <div
+    data-current="Tab 1"
+    data-easing="ease"
+    data-duration-in="300"
+    data-duration-out="100"
+    class="w-tabs">
+    <div class="tab-menu-account w-tab-menu">
+      <a data-w-tab="Tab 1" class="tab-link-account w-inline-block w-tab-link w--current">
+        <div class="tab-link-icon-wrapper"><img
+            loading="lazy"
+            src="//cdn.shopify.com/s/files/1/0714/2922/6772/files/icon-subscription-mgmt.svg?v=1674766851"
+            alt="Blue gear icon with two white arrows creating a circle around the gear icon"
+            class="tab-link-icon-img"></div>
+        <div>Subscription Management</div>
+      </a>
+      <a data-w-tab="Tab 2" class="tab-link-account w-inline-block w-tab-link">
+        <div class="tab-link-icon-wrapper"><img
+            loading="lazy"
+            src="//cdn.shopify.com/s/files/1/0714/2922/6772/files/icon-account-saved-docs.svg?v=1674766851"
+            alt="Account icon"
+            class="tab-link-icon-img"></div>
+        <div>Account &amp; Documents</div>
+      </a>
+      <a data-w-tab="Tab 3" class="tab-link-account w-inline-block w-tab-link">
+        <div class="tab-link-icon-wrapper"><img
+            loading="lazy"
+            src="//cdn.shopify.com/s/files/1/0714/2922/6772/files/icon-account-resources.svg?v=1674766851"
+            alt="Icon of three pieces of paper spread out. The top piece of paper has lines on it"
+            class="tab-link-icon-img"></div>
+        <div>Saved Resources</div>
+      </a>
+    </div>
+    <div class="w-tab-content">
+      <div data-w-tab="Tab 1" class="tab-pane-account w-tab-pane w--tab-active">
+        <div class="tab-wrapper-membership">
+          <div class="tab-pane-grid top">
+            <div id="w-node-e1d1f528-315b-af26-be08-0d54731e3510-ebded4f7" class="tab-pane-grid-inner">
+              <h6 class="h6-smaller-less-spacing">TYPE</h6>
+            </div>
+            <div id="w-node-_965667f0-6f76-a965-91fc-51b98e5d2f68-ebded4f7" class="tab-pane-grid-inner">
+              <h6 class="h6-smaller-less-spacing">PRICE</h6>
+            </div>
+            <div id="w-node-a50fc37c-8b56-8e3f-c025-32cd35c0706c-ebded4f7" class="tab-pane-grid-inner">
+              <h6 class="h6-smaller-less-spacing">STATUS</h6>
+            </div>
+            <div id="w-node-_7bfe6cde-a6ac-a81b-0319-a872ff64a989-ebded4f7" class="tab-pane-grid-inner">
+              <h6 class="h6-smaller-less-spacing">RENEWAL TYPE</h6>
+            </div>
+          </div>
+          <div class="tab-pane-grid">
+            <div id="w-node-_7ac6832f-cad9-02cf-3a07-98064f854271-ebded4f7" class="tab-pane-grid-inner">
+              <div>PIC Membership</div>
+            </div>
+            <div id="w-node-_15607058-f316-1bd2-20f2-d315b8cbf9bc-ebded4f7" class="tab-pane-grid-inner">
+              <div>125.00</div>
+            </div>
+            <div id="w-node-a2ed890a-c64e-e881-253a-749f1b365ffb-ebded4f7" class="tab-pane-grid-inner">
+              <div>Active</div>
+            </div>
+            <div id="w-node-_372d00ae-e4de-7526-3d24-17a2f8668146-ebded4f7" class="tab-pane-grid-inner flex">
+              <div>August 13, 2022</div>
+              <div class="bright-blue-text margin-horizontal hide-mob">|</div>
+              <a href="#" class="account-link w-inline-block">
+                <div class="light-text">cancel</div>
+              </a>
+            </div>
+          </div>
+          <div class="tab-pane-grid expired">
+            <div id="w-node-_019df9f4-40e4-2086-ec94-6bdbb24c1b78-ebded4f7" class="tab-pane-grid-inner">
+              <div>PIC Membership (7-Day Trial)</div>
+            </div>
+            <div id="w-node-_019df9f4-40e4-2086-ec94-6bdbb24c1b7b-ebded4f7" class="tab-pane-grid-inner">
+              <div>Free</div>
+            </div>
+            <div id="w-node-_019df9f4-40e4-2086-ec94-6bdbb24c1b7e-ebded4f7" class="tab-pane-grid-inner">
+              <div>Inactive</div>
+            </div>
+            <div id="w-node-_019df9f4-40e4-2086-ec94-6bdbb24c1b81-ebded4f7" class="tab-pane-grid-inner">
+              <div>Expired</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-w-tab="Tab 2" class="tab-pane-account w-tab-pane">
+        <div class="account-flex-row">
+          <div class="account-flex-col">
+            <h6 class="h6-smaller-less-spacing margin-b center-mob">RESUME DOCUMENTATION</h6>
+            <div class="line-wrapper margin-b center-mob"><img
+                loading="lazy"
+                src="//cdn.shopify.com/s/files/1/0714/2922/6772/files/line-element.svg?v=1674766851"
+                alt=""></div>
+            <div class="document-grid">
+              <div class="larger-text">ErinD-Resume.doc</div>
+              <div id="w-node-_048a3d0f-03b4-d1fb-b478-fd83e3b2a275-ebded4f7" class="document-flex-row">
+                <a href="#" class="document-link-block w-inline-block">
+                  <div class="light-text">view</div>
+                </a>
+                <div class="light-text bright-blue-text horizontal-margin">|</div>
+                <a href="#" class="document-link-block w-inline-block">
+                  <div class="light-text">delete</div>
+                </a>
+              </div>
+            </div>
+            <div class="document-grid">
+              <div class="larger-text">ErinD-Resume.doc</div>
+              <div id="w-node-e441641f-79f7-7111-fcbf-f8dc71cac97d-ebded4f7" class="document-flex-row">
+                <a href="#" class="document-link-block w-inline-block">
+                  <div class="light-text">view</div>
+                </a>
+                <div class="light-text bright-blue-text horizontal-margin">|</div>
+                <a href="#" class="document-link-block w-inline-block">
+                  <div class="light-text">delete</div>
+                </a>
+              </div>
+            </div>
+            <div class="file-upload-flex-row">
+              <div class="file-upload-text-wrapper">
+                <div>Upload Your Resume Files</div>
+                <div class="light-text smaller-text">.doc, .pdf, .zip</div>
+              </div>
+            </div>
+          </div>
+          <div class="account-flex-col">
+            <h6 class="h6-smaller-less-spacing margin-b center-mob">CERTIFICATIONS &amp; OTHER REQUIREMENTS</h6>
+            <div class="line-wrapper margin-b center-mob"><img
+                loading="lazy"
+                src="//cdn.shopify.com/s/files/1/0714/2922/6772/files/line-element.svg?v=1674766851"
+                alt=""></div>
+            <div class="document-grid">
+              <div class="larger-text">FAA Multi Engine Airline Transport Pilot Certificate</div>
+              <div id="w-node-_5dd01286-418c-2a1c-ba42-3719694d6100-ebded4f7" class="document-flex-row">
+                <a href="#" class="document-link-block w-inline-block">
+                  <div class="light-text">view</div>
+                </a>
+                <div class="light-text bright-blue-text horizontal-margin">|</div>
+                <a href="#" class="document-link-block w-inline-block">
+                  <div class="light-text">delete</div>
+                </a>
+              </div>
+            </div>
+            <div class="document-grid">
+              <div class="larger-text">Second Class FAA Medical Certificate</div>
+              <div id="w-node-_5dd01286-418c-2a1c-ba42-3719694d610c-ebded4f7" class="document-flex-row">
+                <a href="#" class="document-link-block w-inline-block">
+                  <div class="light-text">view</div>
+                </a>
+                <div class="light-text bright-blue-text horizontal-margin">|</div>
+                <a href="#" class="document-link-block w-inline-block">
+                  <div class="light-text">delete</div>
+                </a>
+              </div>
+            </div>
+            <div class="document-grid">
+              <div class="larger-text">FCC Restricted Radiotelephone Operators Permit</div>
+              <div id="w-node-e63a6844-6bc2-ccb9-d098-f4e89aefc23b-ebded4f7" class="document-flex-row">
+                <a href="#" class="document-link-block w-inline-block">
+                  <div class="light-text">view</div>
+                </a>
+                <div class="light-text bright-blue-text horizontal-margin">|</div>
+                <a href="#" class="document-link-block w-inline-block">
+                  <div class="light-text">delete</div>
+                </a>
+              </div>
+            </div>
+            <div class="file-upload-flex-row">
+              <div class="file-upload-text-wrapper">
+                <div>Upload Your Certifications &amp; Requirement Files</div>
+                <div class="light-text smaller-text">.doc, .pdf, .zip</div>
+              </div>
+            </div>
+          </div>
+          <div class="account-flex-col">
+            <h6 class="h6-smaller-less-spacing margin-b center-mob">ADDITIONAL RESOURCES</h6>
+            <div class="line-wrapper margin-b center-mob"><img
+                loading="lazy"
+                src="//cdn.shopify.com/s/files/1/0714/2922/6772/files/line-element.svg?v=1674766851"
+                alt=""></div>
+            <div class="document-grid">
+              <div class="larger-text">ErinD-Recommendations.doc</div>
+              <div id="w-node-_2c11772d-ccc3-6560-eaa1-bd0ca534352c-ebded4f7" class="document-flex-row">
+                <a href="#" class="document-link-block w-inline-block">
+                  <div class="light-text">view</div>
+                </a>
+                <div class="light-text bright-blue-text horizontal-margin">|</div>
+                <a href="#" class="document-link-block w-inline-block">
+                  <div class="light-text">delete</div>
+                </a>
+              </div>
+            </div>
+            <div class="file-upload-flex-row">
+              <div class="file-upload-text-wrapper">
+                <div>Upload Your Additional Files</div>
+                <div class="light-text smaller-text">.doc, .pdf, .zip</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-w-tab="Tab 3" class="tab-pane-account w-tab-pane">
+        <div class="account-flex-row">
+          <div class="account-flex-col-alt">
+            <h6 class="h6-smaller-less-spacing margin-b center-mob">ACCOUNT INFORMATION</h6>
+            <div class="line-wrapper margin-b center-mob"><img
+                loading="lazy"
+                src="//cdn.shopify.com/s/files/1/0714/2922/6772/files/line-element.svg?v=1674766851"
+                alt=""></div>
+            <div class="account-flex-row-info">
+              <div class="left-flex-row">
+                <div>Name:
+                </div>
+                <div>Erin Dooley</div>
+              </div>
+              <div class="left-flex-row">
+                <div class="bright-blue-text margin-horizontal">|</div>
+                <a href="#" class="account-link w-inline-block">
+                  <div class="light-text">edit</div>
+                </a>
+              </div>
+            </div>
+            <div class="account-flex-row-info">
+              <div class="left-flex-row">
+                <div>Email:
+                </div>
+                <div>erin.dooley@gmail.com</div>
+              </div>
+              <div class="left-flex-row">
+                <div class="bright-blue-text margin-horizontal">|</div>
+                <a href="#" class="account-link w-inline-block">
+                  <div class="light-text">edit</div>
+                </a>
+              </div>
+            </div>
+            <div class="account-flex-row-info">
+              <div class="left-flex-row">
+                <div>Password:
+                </div>
+                <div>********</div>
+              </div>
+              <div class="left-flex-row">
+                <div class="bright-blue-text margin-horizontal">|</div>
+                <a href="#" class="account-link w-inline-block">
+                  <div class="light-text">edit</div>
+                </a>
+              </div>
+            </div>
+            <div class="account-flex-row-info">
+              <div class="left-flex-row">
+                <div>Phone:
+                </div>
+                <div>(000) 123-4567</div>
+              </div>
+              <div class="left-flex-row">
+                <div class="bright-blue-text margin-horizontal">|</div>
+                <a href="#" class="account-link w-inline-block">
+                  <div class="light-text">edit</div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="account-flex-col-alt">
+            <h6 class="h6-smaller-less-spacing margin-b center-mob">BILLING INFORMATION</h6>
+            <div class="line-wrapper margin-b center-mob"><img
+                loading="lazy"
+                src="//cdn.shopify.com/s/files/1/0714/2922/6772/files/line-element.svg?v=1674766851"
+                alt=""></div>
+            <div class="account-flex-row-info">
+              <div>Card #:</div>
+              <div class="left-flex-row">
+                <div class="card-info-wrapper">
+                  <div>**** **** **** 1234</div>
+                  <div class="light-text smaller-text">exp 02/24</div>
+                </div>
+                <div class="bright-blue-text margin-horizontal">|</div>
+                <a href="#" class="account-link w-inline-block">
+                  <div class="light-text">edit</div>
+                </a>
+              </div>
+            </div>
+            <div class="account-flex-row-info">
+              <div class="billing-date-text-block">Next Billing Date:</div>
+              <div class="left-flex-row">
+                <div>August 13, 2022</div>
+                <div class="bright-blue-text margin-horizontal">|</div>
+                <a href="#" class="account-link w-inline-block">
+                  <div class="light-text">edit</div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="sign-up-section">
+  <div class="sign-up-content-wrapper">
+    <h5>SIGN UP TO GET VALUABLE RESOURCES FROM PIC</h5>
+    <div class="form-block-sign-up w-form">
+      <form
+        id="email-form"
+        name="email-form"
+        data-name="Email Form"
+        method="get"
+        class="form-flex-row-sign-up"><input
+          type="email"
+          class="text-field-sign-up w-input"
+          maxlength="256"
+          name="email-2"
+          data-name="Email 2"
+          placeholder="Your Email Address"
+          id="email-2"
+          required=""><input
+          type="submit"
+          value="Get Started »"
+          data-wait="Please wait..."
+          class="submit-button w-button"></form>
+      <div class="w-form-done">
+        <div>Thank you! Your submission has been received!</div>
+      </div>
+      <div class="w-form-fail">
+        <div>Oops! Something went wrong while submitting the form.</div>
+      </div>
+    </div>
+  </div>
+</div>
