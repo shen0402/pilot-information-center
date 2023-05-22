@@ -57,15 +57,15 @@
               class="nav-dropdown w-dropdown">
               <div class="nav-link dropdown w-dropdown-toggle">
                 <div class="icon-dropdown w-icon-dropdown-toggle"></div>
-                <div>Resources</div>
+                <div>Career Guidance</div>
               </div>
               <nav class="nav-dropdown-list w-dropdown-list">
-                <a href="/pages/career-guidance" class="dropdown-link w-dropdown-link">Career Guidance</a>
+                <a href="/pages/career-guidance" class="dropdown-link w-dropdown-link">Career Consulting</a>
                 <a href="/pages/industry-news" class="dropdown-link w-dropdown-link">Industry News</a>
                 <a href="/pages/financing" class="dropdown-link w-dropdown-link">Financing</a>
-                <a href="/pages/partners" class="dropdown-link w-dropdown-link">Partners</a>
+                <a href="/pages/partners" class="dropdown-link w-dropdown-link">Resources</a>
                 {%- comment -%}
-                  <a href="/pages/media-collection" class="dropdown-link w-dropdown-link">Video Library</a>
+                <a href="/pages/media-collection" class="dropdown-link w-dropdown-link">Video Library</a>
                 {%- endcomment -%}
                 <a href="products.html" class="dropdown-link w-dropdown-link">Products</a>
               </nav>
@@ -87,7 +87,7 @@
           <div class="nav-menu-flex-wrapper alt">
             {% if customer %}
               <a href="/account" class="nav-link dark-blue-text w-nav-link">My Account</a>
-              {%else%}
+            {% else %}
               <a href="/account" class="nav-link dark-blue-text w-nav-link">login</a>
             {% endif %}
             <div class="nav-divider">|</div>
@@ -96,12 +96,12 @@
                 href="/account/logout"
                 data-w-id="4b8a2f5c-6c9d-689f-b501-f7a76c340d3f"
                 class="nav-link dark-blue-text w-nav-link">Logout</a>
-              {%else%}
+            {% else %}
               <a
                 href="/account/register"
                 data-w-id="4b8a2f5c-6c9d-689f-b501-f7a76c340d3f"
                 class="nav-link dark-blue-text w-nav-link">sign up</a>
-              
+
             {% endif %}
           </div>
         </nav>
