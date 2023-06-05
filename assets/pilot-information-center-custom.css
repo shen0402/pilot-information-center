@@ -2183,6 +2183,10 @@ body.scrolled .logo-wrapper-nav {
   box-shadow: 18px 18px 25px -20px rgba(0, 0, 0, 0.15);
 }
 
+.jc-collection-secondary .resources-slide-grid-inner {
+  cursor: pointer;
+}
+
 .resources-slide-grid-inner.white-back {
   padding-top: 20px;
   padding-bottom: 20px;

@@ -21,13 +21,14 @@
             {% assign r = forloop.index | modulo: 6 %}
             {% if r == 1 %}
               <div class="w-slide">
+                {% assign product_link = product.metafields.custom.read_now_button | default: product.url %}
                 <div class="resources-slide-grid">
             {% endif %}
-                <div class="resources-slide-grid-inner">
+                <div class="resources-slide-grid-inner" data-link="{{ product_link }}">
                   <div class="bright-blue-text light-text">{{ collection.title }}</div>
                   <h4 class="blue-text margin-b">{{ product.title }}</h4>
                   <div class="margin-b">{{ product.description | strip_html | truncatewords: 30 }}</div>
-                  <a href="{{ product.url }}" class="bright-blue-link w-inline-block">
+                  <a href="{{ product_link }}" class="bright-blue-link w-inline-block">
                     <div>Read Now »</div>
                   </a>
                 </div>

@@ -41,3 +41,9 @@ $(document).on('click', '.job-filter-link2', function(e){
         $('.job-fair-individ-wrapper').fadeIn();
     }
 });
+
+$(document).on('click', '.jc-collection-secondary .resources-slide-grid-inne', function(e){
+    e.preventDefault();
+    const link = $(this).data('link');
+    window.location.href = link;
+});
