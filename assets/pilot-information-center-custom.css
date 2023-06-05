@@ -6269,3 +6269,15 @@ body.scrolled .logo-wrapper-nav {
   min-width: 0;
   padding-top: 15px;
 }
+
+.types-financing-subheader a {
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+  color: #40b6ff;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.types-financing-subheader a:hover {
+  color: #fff;
+}

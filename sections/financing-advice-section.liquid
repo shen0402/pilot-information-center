@@ -1,0 +1,118 @@
+<div class="financial-advice-section">
+  <div class="header-wrapper">
+    <h2>SCHOLARSHIP ORGANIZATIONS</h2>
+  </div>
+  <div class="slider-wrapper-financial-advice">
+    <div
+      data-delay="4000"
+      data-animation="slide"
+      class="slider-resources w-slider"
+      data-autoplay="false"
+      data-easing="ease"
+      data-hide-arrows="false"
+      data-disable-swipe="false"
+      data-autoplay-limit="0"
+      data-nav-spacing="3"
+      data-duration="500"
+      data-infinite="true">
+      <div class="w-slider-mask">
+        {% assign slider_index = 0 %}
+        {% assign r = 0 %}
+        {% for block in section.blocks %}
+          {% if block.type == 'article' %}
+            {% assign slider_index = slider_index | plus: 1 %}
+            {% assign r = slider_index | modulo: 3 %}
+            {% if r == 1 %}
+              <div class="w-slide">
+                <div class="resources-slide-grid">
+              {% endif %}
+              
+                <div class="resources-slide-grid-inner white-back">
+                  {% if block.settings.date != blank %}
+                    <div class="bright-blue-text light-text">{{ block.settings.date }}</div>
+                  {% endif %}
+                  {% if block.settings.header != blank %}
+                    <h4 class="blue-text margin-b">{{ block.settings.header }}</h4>
+                  {% endif %}
+                  {% if block.settings.description != blank %}
+                    <div class="margin-b">{{ block.settings.description }}</div>
+                  {% endif %}
+                  {% if block.settings.link != blank %}
+                    <a href="{{ block.settings.link }}" class="bright-blue-link w-inline-block">
+                      <div>LEARN MORE »</div>
+                    </a>
+                  {% endif %}
+                </div>
+              
+              {% if r == 0 %}
+              </div>
+              </div>
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+        {% unless r == 0 %}
+            </div>
+            </div>
+        {% endunless %}
+      </div>
+      <div class="slider-arrows interview w-slider-arrow-left"><img
+          src="//cdn.shopify.com/s/files/1/0714/2922/6772/files/arrow-b-left.svg?v=1674766850"
+          loading="lazy"
+          alt="Leftward facing blue arrow"
+          class="slider-arrow-img"></div>
+      <div class="slider-arrows right interview w-slider-arrow-right"><img
+          src="//cdn.shopify.com/s/files/1/0714/2922/6772/files/arrow-b.svg?v=1674766850"
+          loading="lazy"
+          alt="Rightward facing blue arrow"
+          class="slider-arrow-img"></div>
+      <div class="w-slider-nav w-slider-nav-invert w-round"></div>
+    </div>
+  </div>
+  <div class="header-wrapper tight-content-wrapper">
+    <h2>FINANCIAL RESOURCES</h2>
+    <div>
+      <p>Creative Planning uses proven investment and risk mitigation strategies to increase the probability of reaching your financial goals over the course of your career. By providing a comprehensive wealth management plan that goes beyond typical resources such as those from your airline, your union, or your plan administrator, we ensure you are planned through age 99 instead of the standard retirement age of 65. To learn more about how Creative Planning can help you and your family, please contact Steve Lofgren at
+        <a href="mailto: steve.lofgren@creativeplanning.com">steve.lofgren@creativeplanning.com</a>
+      </p>
+    </div>
+    <h4>Powered by Creative Planning</h4>
+    <a href="steve.lofgren@creativeplanning.com" class="hat-link center blue-text w-inline-block">
+      <div class="line-wrapper"><img
+          src="//cdn.shopify.com/s/files/1/0714/2922/6772/files/line-element.svg?v=1674766851"
+          loading="lazy"
+          alt=""></div>
+      <div>EMAIL STEVE »</div>
+    </a>
+  </div>
+</div>
+{% schema %}
+    {
+      "name": "ADVICE SECTION",
+      "settings": [],
+      "blocks": [
+        {
+          "type": "article",
+          "name": "Article",
+          "settings": [
+            {
+              "type": "text",
+              "id": "date",
+              "label": "Date"
+            }, {
+              "type": "text",
+              "id": "header",
+              "label": "Header"
+            }, {
+              "type": "richtext",
+              "id": "description",
+              "label": "Description"
+            }, {
+              "type": "url",
+              "id": "link",
+              "label": "Link"
+            }
+          ]
+        }
+      ]
+    }
+  {% endschema %}

@@ -1,0 +1,377 @@
+<div class="types-section-financing">
+  <div class="types-financing-backgrndimg"></div>
+  <div class="header-wrapper">
+    <h5 class="white-text larger-h5">TYPES OF FINANCING OPTIONS:</h5>
+  </div>
+  <div class="w-layout-grid types-financing-grid">
+    <div class="types-financing-grid-inner">
+      <div class="line-wrapper margin-b"><img
+          src="//cdn.shopify.com/s/files/1/0714/2922/6772/files/line-element.svg?v=1674766851"
+          loading="lazy"
+          alt=""></div>
+      <h3 class="white-text margin-b">{{ section.settings.scholarships_header }}</h3>
+      <div class="types-financing-subheader white-text margin-b larger-margin">{{ section.settings.scholarships_subheader }}</div>
+      <div class="white-text margin-b">{{ section.settings.scholarships_text }}</div>
+    </div>
+    <div class="types-financing-grid-inner">
+      <div class="line-wrapper margin-b"><img
+          src="//cdn.shopify.com/s/files/1/0714/2922/6772/files/line-element.svg?v=1674766851"
+          loading="lazy"
+          alt=""></div>
+      <h3 class="white-text margin-b">{{ section.settings.grants_header }}</h3>
+      <div class="types-financing-subheader white-text margin-b larger-margin">{{ section.settings.grants_subheader }}</div>
+      <div class="white-text margin-b">{{ section.settings.grants_text }}</div>
+    </div>
+    <div class="types-financing-grid-inner">
+      <div class="line-wrapper margin-b"><img
+          src="//cdn.shopify.com/s/files/1/0714/2922/6772/files/line-element.svg?v=1674766851"
+          loading="lazy"
+          alt=""></div>
+      <h3 class="white-text margin-b">{{ section.settings.loans_header }}</h3>
+      <div class="types-financing-subheader white-text margin-b larger-margin">{{ section.settings.loans_subheader }}</div>
+      <div class="white-text margin-b">{{ section.settings.loans_text }}</div>
+    </div>
+  </div>
+  <div
+    id="w-node-_92474ba0-2b29-f9cc-d16b-3df73a66a391-c4b47619"
+    data-current="Tab 1"
+    data-easing="ease"
+    data-duration-in="300"
+    data-duration-out="100"
+    class="w-tabs">
+    <div class="tabs-financing-grid w-tab-menu">
+      <a data-w-tab="Tab 1" class="btn-wrapper-types w-inline-block w-tab-link w--current">
+        <div>View {{ section.settings.scholarships_header }} Options »</div>
+      </a>
+      <a data-w-tab="Tab 2" class="btn-wrapper-types w-inline-block w-tab-link">
+        <div>View {{ section.settings.grants_header }} Options »</div>
+      </a>
+      <a data-w-tab="Tab 3" class="btn-wrapper-types w-inline-block w-tab-link">
+        <div>View {{ section.settings.loans_header }} Options »</div>
+      </a>
+    </div>
+    <div class="w-tab-content">
+      {% assign scholarships = section.blocks | where: 'type', 'scholarships' %}
+      {% assign grants = section.blocks | where: 'type', 'grants' %}
+      {% assign loans = section.blocks | where: 'type', 'loans' %}
+      <div data-w-tab="Tab 1" class="tab-pane-financing w-tab-pane w--tab-active">
+        <div class="scholarship-section">
+          {% for block in scholarships %}
+
+            <div class="content-wrapper">
+              <div class="header-wrapper">
+                <h5 class="larger-h5">{{ block.settings.header }}</h5>
+              </div>
+              <div class="scholarships-wrapper-all">
+                <div class="scholarship-ind">
+                  <div class="schol-information-flex-row">
+                    <div class="scholarship-main-flex-col">
+                      <h4 class="bold-text blue-text">{{ block.settings.name }}</h4>
+                      {% if block.settings.link != blank %}
+                        <a href="{{block.settings.link}}" class="scholarship-link w-inline-block">
+                          <div>apply here »</div>
+                        </a>
+                      {% endif %}
+                    </div>
+                    <div class="schol-inner-info-flex">
+                      <div class="schol-flex-col">
+                        <div>Donor:</div>
+                        <div class="light-text">{{ block.settings.donor }}</div>
+                        <div class="second-info-job-wrapper">
+                          <div>Award:</div>
+                          <div class="light-text">{{ block.settings.award }}</div>
+                        </div>
+                      </div>
+                      <div class="schol-flex-col">
+                        <div>Certificate or Rating</div>
+                        <div class="light-text">{{ block.settings.certificate_rating }}</div>
+                      </div>
+                      <div class="schol-flex-col">
+                        <div>Additional Criteria:</div>
+                        <div>
+                          {{ block.settings.additional_criteria }}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          {% endfor %}
+        </div>
+      </div>
+      <div data-w-tab="Tab 2" class="tab-pane-financing w-tab-pane">
+        <div class="scholarship-section">
+          {% for block in grants %}
+
+            <div class="content-wrapper">
+              <div class="header-wrapper">
+                <h5 class="larger-h5">{{ block.settings.header }}</h5>
+              </div>
+              <div class="scholarships-wrapper-all">
+                <div class="scholarship-ind">
+                  <div class="schol-information-flex-row">
+                    <div class="scholarship-main-flex-col">
+                      <h4 class="bold-text blue-text">{{ block.settings.name }}</h4>
+                      {% if block.settings.link != blank %}
+                        <a href="{{block.settings.link}}" class="scholarship-link w-inline-block">
+                          <div>apply here »</div>
+                        </a>
+                      {% endif %}
+                    </div>
+                    <div class="schol-inner-info-flex">
+                      <div class="schol-flex-col">
+                        <div>Donor:</div>
+                        <div class="light-text">{{ block.settings.donor }}</div>
+                        <div class="second-info-job-wrapper">
+                          <div>Award:</div>
+                          <div class="light-text">{{ block.settings.award }}</div>
+                        </div>
+                      </div>
+                      <div class="schol-flex-col">
+                        <div>Certificate or Rating</div>
+                        <div class="light-text">{{ block.settings.certificate_rating }}</div>
+                      </div>
+                      <div class="schol-flex-col">
+                        <div>Additional Criteria:</div>
+                        <div>
+                          {{ block.settings.additional_criteria }}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          {% endfor %}
+        </div>
+      </div>
+      <div data-w-tab="Tab 3" class="tab-pane-financing w-tab-pane">
+        <div class="scholarship-section">
+          {% for block in loans %}
+
+            <div class="content-wrapper">
+              <div class="header-wrapper">
+                <h5 class="larger-h5">{{ block.settings.header }}</h5>
+              </div>
+              <div class="scholarships-wrapper-all">
+                <div class="scholarship-ind">
+                  <div class="schol-information-flex-row">
+                    <div class="scholarship-main-flex-col">
+                      <h4 class="bold-text blue-text">{{ block.settings.name }}</h4>
+                      {% if block.settings.link != blank %}
+                        <a href="{{block.settings.link}}" class="scholarship-link w-inline-block">
+                          <div>apply here »</div>
+                        </a>
+                      {% endif %}
+                    </div>
+                    <div class="schol-inner-info-flex">
+                      <div class="schol-flex-col">
+                        <div>Donor:</div>
+                        <div class="light-text">{{ block.settings.donor }}</div>
+                        <div class="second-info-job-wrapper">
+                          <div>Award:</div>
+                          <div class="light-text">{{ block.settings.award }}</div>
+                        </div>
+                      </div>
+                      <div class="schol-flex-col">
+                        <div>Certificate or Rating</div>
+                        <div class="light-text">{{ block.settings.certificate_rating }}</div>
+                      </div>
+                      <div class="schol-flex-col">
+                        <div>Additional Criteria:</div>
+                        <div>
+                          {{ block.settings.additional_criteria }}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "FINANCING OPTIONS",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Scholarships"
+      },
+      {
+        "type": "text",
+        "id": "scholarships_header",
+        "label": "Header",
+        "default": "Scholarships"
+      },
+      {
+        "type": "richtext",
+        "id": "scholarships_subheader",
+        "label": "Subheader",
+        "default": "<p>Powered by Pilot <a href=\"#\">Pipeline</a></p>"
+      },
+      {
+        "type": "richtext",
+        "id": "scholarships_text",
+        "label": "Text",
+        "default": "<p>Use personalized filters to sort through hundreds of scholarships to find the ones that meet your specific situation.</p>"
+      }, {
+        "type": "header",
+        "content": "Grants"
+      }, {
+        "type": "text",
+        "id": "grants_header",
+        "label": "Header",
+        "default": "Grants"
+      }, {
+        "type": "richtext",
+        "id": "grants_subheader",
+        "label": "Subheader"
+      }, {
+        "type": "richtext",
+        "id": "grants_text",
+        "label": "Text",
+        "default": "<p>Grants are an overlooked, yet powerful financing option. Don’t miss out - learn more about different grant opportunities.</p>"
+      }, {
+        "type": "header",
+        "content": "Loans"
+      }, {
+        "type": "text",
+        "id": "loans_header",
+        "label": "Header",
+        "default": "Loans"
+      }, {
+        "type": "richtext",
+        "id": "loans_subheader",
+        "label": "Subheader"
+      }, {
+        "type": "richtext",
+        "id": "loans_text",
+        "label": "Text",
+        "default": "<p>There are many lenders that provide affordable and flexible financing options. Check out our trusted lenders to see if a flight training loan is right for you!</p>"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "scholarships",
+        "name": "Scholarships",
+        "settings": [
+          {
+            "type": "text",
+            "id": "header",
+            "label": "Header"
+          },
+          {
+            "type": "text",
+            "id": "name",
+            "label": "Name"
+          },
+          {
+            "type": "text",
+            "id": "donor",
+            "label": "Donor"
+          },
+          {
+            "type": "text",
+            "id": "award",
+            "label": "Award"
+          }, {
+            "type": "richtext",
+            "id": "certificate_rating",
+            "label": "Certificate or Rating"
+          }, {
+            "type": "richtext",
+            "id": "additional_criteria",
+            "label": "Additional Criteria"
+          }, {
+            "type": "url",
+            "id": "link",
+            "label": "Link"
+          }
+        ]
+      }, {
+        "type": "grants",
+        "name": "Grants",
+        "settings": [
+          {
+            "type": "text",
+            "id": "header",
+            "label": "Header"
+          },
+          {
+            "type": "text",
+            "id": "name",
+            "label": "Name"
+          },
+          {
+            "type": "text",
+            "id": "donor",
+            "label": "Donor"
+          },
+          {
+            "type": "text",
+            "id": "award",
+            "label": "Award"
+          }, {
+            "type": "richtext",
+            "id": "certificate_rating",
+            "label": "Certificate or Rating"
+          }, {
+            "type": "richtext",
+            "id": "additional_criteria",
+            "label": "Additional Criteria"
+          }, {
+            "type": "url",
+            "id": "link",
+            "label": "Link"
+          }
+        ]
+      }, {
+        "type": "loans",
+        "name": "Loans",
+        "settings": [
+          {
+            "type": "text",
+            "id": "header",
+            "label": "Header"
+          },
+          {
+            "type": "text",
+            "id": "name",
+            "label": "Name"
+          },
+          {
+            "type": "text",
+            "id": "donor",
+            "label": "Donor"
+          },
+          {
+            "type": "text",
+            "id": "award",
+            "label": "Award"
+          }, {
+            "type": "richtext",
+            "id": "certificate_rating",
+            "label": "Certificate or Rating"
+          }, {
+            "type": "richtext",
+            "id": "additional_criteria",
+            "label": "Additional Criteria"
+          }, {
+            "type": "url",
+            "id": "link",
+            "label": "Link"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
