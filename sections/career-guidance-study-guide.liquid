@@ -1,0 +1,65 @@
+<div class="study-guide-section">
+  <div class="membership-p-wrapper"></div>
+  <div class="membership-options-wrapper">
+    <div class="product-wrapper">
+      <div class="header-wrapper">
+        <h2>{{ section.settings.header }}</h2>
+      </div>
+      <div class="product-grid">
+        {% for block in section.blocks %}
+          <a href="{{ block.settings.link }}" class="product-grid-inner w-inline-block">
+            <div class="product-img-wrapper"><img
+                src="{{ block.settings.image | img_url: '450x' }}"
+                loading="lazy"
+                alt="{{ block.settings.title }}"
+                class="product-img"></div>
+            <div class="larger-text margin-b">{{ block.settings.title }}</div>
+            <div class="line-wrapper margin-b smaller center-land"><img
+                src="//cdn.shopify.com/s/files/1/0714/2922/6772/files/line-element.svg?v=1674766851"
+                loading="lazy"
+                alt=""></div>
+            <div class="light-text">{{ block.settings.text }}</div>
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Study Guide",
+    "settings": [
+      {
+        "type": "text",
+        "id": "header",
+        "label": "Header",
+        "default": "Shop Our Study Guides"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "item",
+        "name": "Item",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          }, {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          }, {
+            "type": "richtext",
+            "id": "text",
+            "label": "Description"
+          }, {
+            "type": "url",
+            "id": "link",
+            "label": "Link"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
