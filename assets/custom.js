@@ -2,13 +2,14 @@ $(document).on('click', '.job-filter-link', function(e){
     e.preventDefault();
     const label = $(this).text().trim();
     const q = $(this).data('query').trim();
-    $('.dropdown-filter-list').removeClass('w--open');
-    $('.job-filter-toggle__text').text(label);
-    $('.job-individ-wrapper').hide();
+    const $tab = $(this).closest('.w-tab-pane');
+    $tab.find('.dropdown-filter-list').removeClass('w--open');
+    $tab.find('.job-filter-toggle__text').text(label);
+    $tab.find('.job-individ-wrapper').hide();
     if (q) {
-        $(`[data-job-type="${q}"]`).fadeIn();
+        $tab.find(`[data-job-type="${q}"]`).fadeIn();
     } else {
-        $('.job-individ-wrapper').fadeIn();
+        $tab.find('.job-individ-wrapper').fadeIn();
     }
 });
 
