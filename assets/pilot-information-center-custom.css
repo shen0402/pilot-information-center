@@ -6433,3 +6433,69 @@ body.scrolled .logo-wrapper-nav {
   padding: 0;
   border: none;
 }
+
+.training-jump {
+
+}
+
+.training-jump-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.training-jump__header {
+  width: 20%;
+}
+
+.training-jump__links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  background-color: #00173f;
+  clip-path: polygon(4% 0%, 100% 0%, 100% 100%, 0% 100%);
+  flex-wrap: wrap;
+}
+
+.training-jump__link-item {
+  width: 30%;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.training-jump__link-icon {
+  max-width: 50px;
+  margin-right: 20px;
+}
+
+.training-jump__header, .training-jump__link-item {
+  padding: 25px;
+  text-align: center;
+}
+
+.training-jump__header {
+  color: #00173f;
+}
+
+@media (max-width: 991px) {
+  .training-jump__header, .training-jump__links, .training-jump__link-item {
+    width: 100%;
+    text-align: left;
+  }
+
+  .training-jump__links {
+    clip-path: none;
+    justify-content: flex-start;
+    padding: 20px 0;
+  }
+
+  .training-jump__link-item {
+    padding: 10px 20px;
+    justify-content: flex-start;
+  }
+}
