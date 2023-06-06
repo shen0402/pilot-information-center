@@ -2284,6 +2284,11 @@ body.scrolled .logo-wrapper-nav {
   grid-template-rows: auto;
 }
 
+.training-tabs .types-financing-grid {
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
 .slider-wrapper-financial-advice {
   margin-bottom: 60px;
 }
@@ -2330,6 +2335,11 @@ body.scrolled .logo-wrapper-nav {
   background-position: 50% 50%;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.training-tabs .types-financing-backgrndimg {
+  background-image: url('https://cdn.shopify.com/s/files/1/0714/2922/6772/files/university-bg-min.jpg?v=1686004842');
+  height: 80%;
 }
 
 .scholarship-section {
@@ -2391,6 +2401,13 @@ body.scrolled .logo-wrapper-nav {
   -webkit-flex: 0 30%;
   -ms-flex: 0 30%;
   flex: 0 30%;
+}
+
+.schol-flex-col.col-12 {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 100%;
+  -ms-flex: 0 100%;
+  flex: 0 100%;
 }
 
 .schol-inner-info-flex {
@@ -2924,6 +2941,11 @@ body.scrolled .logo-wrapper-nav {
   grid-template-columns: 1fr 1fr 1fr;
   -ms-grid-rows: auto;
   grid-template-rows: auto;
+}
+
+.training-tabs .tabs-financing-grid {
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .tab-pane-financing {
@@ -4848,6 +4870,11 @@ body.scrolled .logo-wrapper-nav {
     grid-template-columns: 1fr;
   }
 
+  .training-tabs .types-financing-grid {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
   .btn-wrapper-types {
     margin-top: 0px;
     -webkit-transition-duration: 250ms;
@@ -4991,6 +5018,11 @@ body.scrolled .logo-wrapper-nav {
   .tabs-financing-grid {
     margin-top: 20px;
     margin-bottom: 0px;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .training-tabs .tabs-financing-grid {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
   }
@@ -6289,4 +6321,11 @@ body.scrolled .logo-wrapper-nav {
 
 .types-financing-subheader a:hover {
   color: #fff;
+}
+.tabs-header {
+  text-align: left;
+  color: #ffffff;
+}
+.tabs-header .notification {
+  text-align: center;
 }

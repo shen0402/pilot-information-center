@@ -1,0 +1,396 @@
+<div class="types-section-financing training-tabs">
+  <div class="types-financing-backgrndimg"></div>
+  <div class="header-wrapper">
+    <div class="tight-content-wrapper tabs-header">
+      <p class="notification text-center margin-b">{{ section.settings.notification }}</p>
+      <h4>{{ section.settings.subtitle }}</h4>
+      <h2>{{ section.settings.title }}</h2>
+      <div class="top-inner-content margin-b">
+        {{ section.settings.description }}
+      </div>
+    </div>
+  </div>
+  <div class="w-layout-grid types-financing-grid">
+    {% if section.settings.tab1_header != blank %}
+      <div class="types-financing-grid-inner">
+        <div class="line-wrapper margin-b"><img
+            src="//cdn.shopify.com/s/files/1/0714/2922/6772/files/line-element.svg?v=1674766851"
+            loading="lazy"
+            alt=""></div>
+        <h3 class="white-text margin-b">{{ section.settings.tab1_header }}</h3>
+        <div class="white-text margin-b">{{ section.settings.tab1_text }}</div>
+      </div>
+    {% endif %}
+    {% if section.settings.tab2_header != blank %}
+      <div class="types-financing-grid-inner">
+        <div class="line-wrapper margin-b"><img
+            src="//cdn.shopify.com/s/files/1/0714/2922/6772/files/line-element.svg?v=1674766851"
+            loading="lazy"
+            alt=""></div>
+        <h3 class="white-text margin-b">{{ section.settings.tab2_header }}</h3>
+        <div class="white-text margin-b">{{ section.settings.tab2_text }}</div>
+      </div>
+    {% endif %}
+    {% if section.settings.tab3_header != blank %}
+      <div class="types-financing-grid-inner">
+        <div class="line-wrapper margin-b"><img
+            src="//cdn.shopify.com/s/files/1/0714/2922/6772/files/line-element.svg?v=1674766851"
+            loading="lazy"
+            alt=""></div>
+        <h3 class="white-text margin-b">{{ section.settings.tab3_header }}</h3>
+        <div class="white-text margin-b">{{ section.settings.tab3_text }}</div>
+      </div>
+    {% endif %}
+    {% if section.settings.tab4_header != blank %}
+      <div class="types-financing-grid-inner">
+        <div class="line-wrapper margin-b"><img
+            src="//cdn.shopify.com/s/files/1/0714/2922/6772/files/line-element.svg?v=1674766851"
+            loading="lazy"
+            alt=""></div>
+        <h3 class="white-text margin-b">{{ section.settings.tab4_header }}</h3>
+        <div class="white-text margin-b">{{ section.settings.tab4_text }}</div>
+      </div>
+    {% endif %}
+  </div>
+  <div
+    id="w-node-_92474ba0-2b29-f9cc-d16b-3df73a66a391-c4b47619"
+    data-current="Tab 1"
+    data-easing="ease"
+    data-duration-in="300"
+    data-duration-out="100"
+    class="w-tabs">
+    <div class="tabs-financing-grid w-tab-menu">
+      {% if section.settings.tab1_header != blank %}
+        <a data-w-tab="Tab 1" class="btn-wrapper-types w-inline-block w-tab-link w--current">
+          <div>View »</div>
+        </a>
+      {% endif %}
+      {% if section.settings.tab2_header != blank %}
+        <a data-w-tab="Tab 2" class="btn-wrapper-types w-inline-block w-tab-link">
+          <div>View »</div>
+        </a>
+      {% endif %}
+      {% if section.settings.tab3_header != blank %}
+        <a data-w-tab="Tab 3" class="btn-wrapper-types w-inline-block w-tab-link">
+          <div>View »</div>
+        </a>
+      {% endif %}
+      {% if section.settings.tab4_header != blank %}
+        <a data-w-tab="Tab 4" class="btn-wrapper-types w-inline-block w-tab-link">
+          <div>View »</div>
+        </a>
+      {% endif %}
+    </div>
+    <div class="w-tab-content">
+      {% assign tab1 = section.blocks | where: 'type', 'tab1' %}
+      {% assign tab2 = section.blocks | where: 'type', 'tab2' %}
+      {% assign tab3 = section.blocks | where: 'type', 'tab3' %}
+      {% assign tab4 = section.blocks | where: 'type', 'tab4' %}
+      {% if tab1.size > 0 %}
+        <div data-w-tab="Tab 1" class="tab-pane-financing w-tab-pane w--tab-active">
+          <div class="scholarship-section">
+            {% for block in tab1 %}
+              <div class="content-wrapper">
+                <div class="header-wrapper">
+                  <h5 class="larger-h5">{{ block.settings.tab_header }}</h5>
+                </div>
+                <div class="scholarships-wrapper-all">
+                  <div class="scholarship-ind">
+                    <div class="schol-information-flex-row">
+                      <div class="scholarship-main-flex-col">
+                        <h4 class="bold-text blue-text">{{ block.settings.header }}</h4>
+                        {% if block.settings.link != blank %}
+                          <a href="{{block.settings.link}}" class="scholarship-link w-inline-block">
+                            <div>Job board »</div>
+                          </a>
+                        {% endif %}
+                      </div>
+                      <div class="schol-inner-info-flex">
+                        <div class="schol-flex-col col-12">
+                          <div class="light-text">{{ block.settings.description }}</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+      {% if tab2.size > 0 %}
+        <div data-w-tab="Tab 2" class="tab-pane-financing w-tab-pane">
+          <div class="scholarship-section">
+            {% for block in tab2 %}
+              <div class="content-wrapper">
+                <div class="header-wrapper">
+                  <h5 class="larger-h5">{{ block.settings.tab_header }}</h5>
+                </div>
+                <div class="scholarships-wrapper-all">
+                  <div class="scholarship-ind">
+                    <div class="schol-information-flex-row">
+                      <div class="scholarship-main-flex-col">
+                        <h4 class="bold-text blue-text">{{ block.settings.header }}</h4>
+                        {% if block.settings.link != blank %}
+                          <a href="{{block.settings.link}}" class="scholarship-link w-inline-block">
+                            <div>Job board »</div>
+                          </a>
+                        {% endif %}
+                      </div>
+                      <div class="schol-inner-info-flex">
+                        <div class="schol-flex-col col-12">
+                          <div class="light-text">{{ block.settings.description }}</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+      {% if tab3.size > 0 %}
+        <div data-w-tab="Tab 3" class="tab-pane-financing w-tab-pane">
+          <div class="scholarship-section">
+            {% for block in tab3 %}
+              <div class="content-wrapper">
+                <div class="header-wrapper">
+                  <h5 class="larger-h5">{{ block.settings.tab_header }}</h5>
+                </div>
+                <div class="scholarships-wrapper-all">
+                  <div class="scholarship-ind">
+                    <div class="schol-information-flex-row">
+                      <div class="scholarship-main-flex-col">
+                        <h4 class="bold-text blue-text">{{ block.settings.header }}</h4>
+                        {% if block.settings.link != blank %}
+                          <a href="{{block.settings.link}}" class="scholarship-link w-inline-block">
+                            <div>Job board »</div>
+                          </a>
+                        {% endif %}
+                      </div>
+                      <div class="schol-inner-info-flex">
+                        <div class="schol-flex-col col-12">
+                          <div class="light-text">{{ block.settings.description }}</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+      {% if tab4.size > 0 %}
+        <div data-w-tab="Tab 4" class="tab-pane-financing w-tab-pane">
+          <div class="scholarship-section">
+            {% for block in tab4 %}
+              <div class="content-wrapper">
+                <div class="header-wrapper">
+                  <h5 class="larger-h5">{{ block.settings.tab_header }}</h5>
+                </div>
+                <div class="scholarships-wrapper-all">
+                  <div class="scholarship-ind">
+                    <div class="schol-information-flex-row">
+                      <div class="scholarship-main-flex-col">
+                        <h4 class="bold-text blue-text">{{ block.settings.header }}</h4>
+                        {% if block.settings.link != blank %}
+                          <a href="{{block.settings.link}}" class="scholarship-link w-inline-block">
+                            <div>Job board »</div>
+                          </a>
+                        {% endif %}
+                      </div>
+                      <div class="schol-inner-info-flex">
+                        <div class="schol-flex-col col-12">
+                          <div class="light-text">{{ block.settings.description }}</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Educational Institutions",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Header"
+      },
+      {
+        "type": "textarea",
+        "id": "notification",
+        "label": "Notification",
+        "default": "**this will be a tabbed format similar the Financing page"
+      },
+      {
+        "type": "text",
+        "id": "subtitle",
+        "label": "SubTitle",
+        "default": "Begin Your Aviation Journey"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Educational Institutions"
+      }, {
+        "type": "richtext",
+        "id": "description",
+        "label": "Description",
+        "default": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>"
+      }, {
+        "type": "header",
+        "content": "Tab1"
+      }, {
+        "type": "text",
+        "id": "tab1_header",
+        "label": "Header",
+        "default": "Aviation Universities"
+      }, {
+        "type": "richtext",
+        "id": "tab1_text",
+        "label": "Text",
+        "default": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.</p>"
+      }, {
+        "type": "header",
+        "content": "Tab2"
+      }, {
+        "type": "text",
+        "id": "tab2_header",
+        "label": "Header",
+        "default": "Flight Schools"
+      }, {
+        "type": "richtext",
+        "id": "tab2_text",
+        "label": "Text",
+        "default": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.</p>"
+      }, {
+        "type": "header",
+        "content": "Tab3"
+      }, {
+        "type": "text",
+        "id": "tab3_header",
+        "label": "Header",
+        "default": "Training Companies"
+      }, {
+        "type": "richtext",
+        "id": "tab3_text",
+        "label": "Text",
+        "default": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.</p>"
+      }, {
+        "type": "header",
+        "content": "Tab4"
+      }, {
+        "type": "text",
+        "id": "tab4_header",
+        "label": "Header",
+        "default": "Airline Career Pathway Programs"
+      }, {
+        "type": "richtext",
+        "id": "tab4_text",
+        "label": "Text",
+        "default": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.</p>"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "tab1",
+        "name": "Tab1",
+        "settings": [
+          {
+            "type": "text",
+            "id": "tab_header",
+            "label": "Tab Header"
+          }, {
+            "type": "text",
+            "id": "header",
+            "label": "Header"
+          }, {
+            "type": "richtext",
+            "id": "description",
+            "label": "Description"
+          }, {
+            "type": "url",
+            "id": "link",
+            "label": "Link"
+          }
+        ]
+      }, {
+        "type": "tab2",
+        "name": "Tab2",
+        "settings": [
+          {
+            "type": "text",
+            "id": "tab_header",
+            "label": "Tab Header"
+          }, {
+            "type": "text",
+            "id": "header",
+            "label": "Header"
+          }, {
+            "type": "richtext",
+            "id": "description",
+            "label": "Description"
+          }, {
+            "type": "url",
+            "id": "link",
+            "label": "Link"
+          }
+        ]
+      }, {
+        "type": "tab3",
+        "name": "Tab3",
+        "settings": [
+          {
+            "type": "text",
+            "id": "tab_header",
+            "label": "Tab Header"
+          }, {
+            "type": "text",
+            "id": "header",
+            "label": "Header"
+          }, {
+            "type": "richtext",
+            "id": "description",
+            "label": "Description"
+          }, {
+            "type": "url",
+            "id": "link",
+            "label": "Link"
+          }
+        ]
+      }, {
+        "type": "tab4",
+        "name": "Tab4",
+        "settings": [
+          {
+            "type": "text",
+            "id": "tab_header",
+            "label": "Tab Header"
+          }, {
+            "type": "text",
+            "id": "header",
+            "label": "Header"
+          }, {
+            "type": "richtext",
+            "id": "description",
+            "label": "Description"
+          }, {
+            "type": "url",
+            "id": "link",
+            "label": "Link"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
