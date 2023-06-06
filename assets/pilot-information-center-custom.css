@@ -1182,7 +1182,7 @@ body.scrolled .logo-wrapper-nav {
 }
 
 .hero-img-wrapper.training {
-  background-image: url('//cdn.shopify.com/s/files/1/0714/2922/6772/files/angle-left-w.svg?v=1674766850'), url('//cdn.shopify.com/s/files/1/0714/2922/6772/files/training-hero-min.jpg?v=1674766851');
+  background-image: url('//cdn.shopify.com/s/files/1/0714/2922/6772/files/angle-left-w.svg?v=1674766850'), url('//cdn.shopify.com/s/files/1/0714/2922/6772/files/hero-resources-min.jpg?v=1686004842');
 }
 
 .hero-img-wrapper.vetted-partners {
@@ -1240,6 +1240,16 @@ body.scrolled .logo-wrapper-nav {
 
 .header-wrapper {
   text-align: center;
+}
+
+.exam-prep .header-wrapper {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.exam-prep .header-wrapper.large {
+  max-width: 100%;
+  margin: 0;
 }
 
 .video-grid {
@@ -2357,6 +2367,11 @@ body.scrolled .logo-wrapper-nav {
   height: 80%;
 }
 
+.exam-prep .types-financing-backgrndimg {
+  background-image: url('https://cdn.shopify.com/s/files/1/0714/2922/6772/files/study-bg-min.jpg?v=1686004842');
+  max-height: 1000px;
+}
+
 .scholarship-section {
   padding-top: 80px;
   padding-bottom: 40px;
@@ -2380,6 +2395,26 @@ body.scrolled .logo-wrapper-nav {
   border-bottom-style: none;
 }
 
+.exam-prep .scholarships-wrapper-all {
+  border-top: 1px solid #00173f;
+  margin: 0;
+  padding-top: 40px;
+}
+
+.exam-prep .scholarships-wrapper-all.first, .exam-prep .no-header {
+  border-top-style: none;
+}
+
+.exam-prep .no-header {
+  padding-top: 0;
+}
+
+.exam-prep .scholarship-ind {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 40px;
+}
+
 .schol-information-flex-row {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2399,12 +2434,22 @@ body.scrolled .logo-wrapper-nav {
   flex: 0 35%;
 }
 
+.exam-prep .scholarship-main-flex-col {
+  -webkit-flex: 0 25%;
+  -ms-flex: 0 25%;
+  flex: 0 25%;
+}
+
 .scholarship-link {
   margin-top: 10px;
   -webkit-transition: all 200ms ease;
   transition: all 200ms ease;
   color: #40b6ff;
   text-decoration: none;
+}
+
+.exam-prep .scholarship-link {
+  margin-top: 0;
 }
 
 .scholarship-link:hover {
@@ -2416,6 +2461,36 @@ body.scrolled .logo-wrapper-nav {
   -webkit-flex: 0 30%;
   -ms-flex: 0 30%;
   flex: 0 30%;
+}
+
+.exam-prep .schol-flex-col {
+  flex: none;
+}
+
+.exam-prep .schol-flex-col.subheader {
+  width: calc((100% - 90px) * 0.35);
+}
+.exam-prep .schol-flex-col.main {
+  width: calc((100% - 90px) * 0.65);
+  padding: 0 20px;
+}
+.exam-prep .schol-flex-col.button {
+  max-width: 90px;
+  width: 100%;
+}
+
+@media (max-width: 991px) {
+  .exam-prep .schol-flex-col.subheader {
+    width: 100%;
+  }
+  .exam-prep .schol-flex-col.main {
+    width: 100%;
+    padding: 0;
+  }
+  .exam-prep .schol-flex-col.button {
+    max-width: 100%;
+    width: 100%;
+  }
 }
 
 .schol-flex-col.col-12 {
@@ -2439,6 +2514,12 @@ body.scrolled .logo-wrapper-nav {
   -webkit-flex: 0 60%;
   -ms-flex: 0 60%;
   flex: 0 60%;
+}
+
+.exam-prep .schol-inner-info-flex {
+  -webkit-flex: 0 70%;
+  -ms-flex: 0 70%;
+  flex: 0 70%;
 }
 
 .schol-list-item {
@@ -6341,6 +6422,14 @@ body.scrolled .logo-wrapper-nav {
   text-align: left;
   color: #ffffff;
 }
-.tabs-header .notification {
-  text-align: center;
+.exam-prep .w-tab-link {
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+  text-align: left;
+}
+
+.exam-prep .types-financing-grid-inner {
+  padding: 0;
+  border: none;
 }
