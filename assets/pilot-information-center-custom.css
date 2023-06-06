@@ -401,6 +401,10 @@ a {
   margin-left: auto;
 }
 
+.books-for-pilots .tight-content-wrapper {
+  text-align: left;
+}
+
 .tight-content-wrapper a {
   color: #00173f;
   text-decoration: none;
@@ -1834,6 +1838,10 @@ body.scrolled .logo-wrapper-nav {
   margin-bottom: 80px;
 }
 
+.books-for-pilots .product-wrapper {
+  margin-bottom: 0;
+}
+
 .product-grid-inner {
   -webkit-transition: all 250ms ease;
   transition: all 250ms ease;
@@ -2250,6 +2258,13 @@ body.scrolled .logo-wrapper-nav {
 .study-guide-section {
   margin-top: 100px;
   margin-bottom: 100px;
+}
+
+.books-for-pilots {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin: 0;
+  background-color: #eeeeee;
 }
 
 .financing-top-section {
