@@ -1,0 +1,224 @@
+<div class="membership-section">
+  <div class="membership-p-wrapper">
+    {{ section.settings.text }}
+  </div>
+  <div class="membership-options-wrapper">
+    {% assign career_guidance = section.blocks | where: 'type', 'career_guidance' %}
+    {% assign education_training = section.blocks | where: 'type', 'education_training' %}
+    {% assign job_seekers = section.blocks | where: 'type', 'job_seekers' %}
+    <div class="option-wrapper">
+      <h3>Career Guidance</h3>
+      <div class="option-grid">
+        {% for block in career_guidance %}
+          <div class="option-grid-inner">
+            <h6 class="h6-smaller-less-spacing margin-b">{{ block.settings.header }}</h6>
+            <div class="margin-b">{{ block.settings.description }}</div>
+            <div class="line-wrapper margin-b smaller center-mob">
+              <svg
+                width="125"
+                height="5"
+                viewBox="0 0 125 5"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_2_198)">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M2.77 0L0 5H122.23L125 0H2.77Z"
+                    fill="#40B6FF" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_2_198">
+                    <rect
+                      width="125"
+                      height="5"
+                      fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+            <a href="{{ block.settings.button_link }}" class="option-link-block w-inline-block">
+              <div>{{ block.settings.button_label }} »</div>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="option-wrapper">
+      <h3>Education & Training</h3>
+      <div class="option-grid">
+        {% for block in education_training %}
+          <div class="option-grid-inner">
+            <h6 class="h6-smaller-less-spacing margin-b">{{ block.settings.header }}</h6>
+            <div class="margin-b">{{ block.settings.description }}</div>
+            <div class="line-wrapper margin-b smaller center-mob">
+              <svg
+                width="125"
+                height="5"
+                viewBox="0 0 125 5"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_2_198)">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M2.77 0L0 5H122.23L125 0H2.77Z"
+                    fill="#40B6FF" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_2_198">
+                    <rect
+                      width="125"
+                      height="5"
+                      fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+            <a href="{{ block.settings.button_link }}" class="option-link-block w-inline-block">
+              <div>{{ block.settings.button_label }} »</div>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="option-wrapper">
+      <h3>Job Seekers</h3>
+      <div class="option-grid">
+        {% for block in job_seekers %}
+          <div class="option-grid-inner">
+            <h6 class="h6-smaller-less-spacing margin-b">{{ block.settings.header }}</h6>
+            <div class="margin-b">{{ block.settings.description }}</div>
+            <div class="line-wrapper margin-b smaller center-mob">
+              <svg
+                width="125"
+                height="5"
+                viewBox="0 0 125 5"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_2_198)">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M2.77 0L0 5H122.23L125 0H2.77Z"
+                    fill="#40B6FF" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_2_198">
+                    <rect
+                      width="125"
+                      height="5"
+                      fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+            <a href="{{ block.settings.button_link }}" class="option-link-block w-inline-block">
+              <div>{{ block.settings.button_label }} »</div>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Membership Section",
+    "settings": [
+      {
+        "type": "richtext",
+        "id": "text",
+        "label": "Text",
+        "default": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis.</p>"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "career_guidance",
+        "name": "Career Guidance",
+        "settings": [
+          {
+            "type": "text",
+            "id": "header",
+            "label": "Header"
+          },
+          {
+            "type": "richtext",
+            "id": "description",
+            "label": "Description"
+          },
+          {
+            "type": "header",
+            "content": "Button"
+          },
+          {
+            "type": "text",
+            "id": "button_label",
+            "label": "Label"
+          }, {
+            "type": "url",
+            "id": "button_link",
+            "label": "Link"
+          }
+        ]
+      }, {
+        "type": "education_training",
+        "name": "Education & Training",
+        "settings": [
+          {
+            "type": "text",
+            "id": "header",
+            "label": "Header"
+          },
+          {
+            "type": "richtext",
+            "id": "description",
+            "label": "Description"
+          },
+          {
+            "type": "header",
+            "content": "Button"
+          },
+          {
+            "type": "text",
+            "id": "button_label",
+            "label": "Label"
+          }, {
+            "type": "url",
+            "id": "button_link",
+            "label": "Link"
+          }
+        ]
+      }, {
+        "type": "job_seekers",
+        "name": "Job Seekers",
+        "settings": [
+          {
+            "type": "text",
+            "id": "header",
+            "label": "Header"
+          },
+          {
+            "type": "richtext",
+            "id": "description",
+            "label": "Description"
+          },
+          {
+            "type": "header",
+            "content": "Button"
+          },
+          {
+            "type": "text",
+            "id": "button_label",
+            "label": "Label"
+          }, {
+            "type": "url",
+            "id": "button_link",
+            "label": "Link"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
