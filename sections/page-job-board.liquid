@@ -45,7 +45,8 @@
               <a
                 href="javascript:;"
                 class="dropdown-filter-link w-dropdown-link job-filter-link"
-                data-query="">All Jobs</a>
+                data-query=""
+                target="_blank">Visit Site</a>
               <a
                 href="javascript:;"
                 class="dropdown-filter-link w-dropdown-link job-filter-link"
@@ -117,7 +118,10 @@
                       </div>
                     </div>
                     <div class="job-information-flex-col col-4">
-                      <a href="{{ block.settings.link }}" class="submit-button w-button">VIEW JOBS</a>
+                      <a
+                        href="{{ block.settings.link }}"
+                        class="submit-button w-button"
+                        target="_blank">VIEW JOBS</a>
                     </div>
                   </div>
                 </div>
@@ -128,75 +132,6 @@
         </div>
       </div>
       <div data-w-tab="Tab 2" class="tab-pane-jobs w-tab-pane">
-        <div class="header-wrapper">
-          <h5>Filter Online Positions By:</h5>
-        </div>
-        <div class="job-filter-flex-row">
-          <div
-            data-delay="0"
-            data-hover="false"
-            class="filter-dropdown w-dropdown">
-            <div class="job-filter-toggle job-board w-dropdown-toggle">
-              <div class="w-icon-dropdown-toggle"></div>
-              <div class="job-filter-toggle__text">Type<span class="bright-blue-text">*</span>
-              </div>
-            </div>
-            <nav class="dropdown-filter-list w-dropdown-list">
-              <a
-                href="javascript:;"
-                class="dropdown-filter-link w-dropdown-link job-filter-link"
-                data-query="">All Jobs</a>
-              <a
-                href="javascript:;"
-                class="dropdown-filter-link w-dropdown-link job-filter-link"
-                data-query="{{ 'Agriculture / Energy' | handleize }}">Agriculture / Energy</a>
-              <a
-                href="javascript:;"
-                class="dropdown-filter-link w-dropdown-link job-filter-link"
-                data-query="{{ 'Entry Level Agriculture / Energy' | handleize }}">Entry Level Agriculture / Energy</a>
-              <a
-                href="javascript:;"
-                class="dropdown-filter-link w-dropdown-link job-filter-link"
-                data-query="{{ 'Entry Level Cargo' | handleize }}">Entry Level Cargo</a>
-              <a
-                href="javascript:;"
-                class="dropdown-filter-link w-dropdown-link job-filter-link"
-                data-query="{{ 'Entry Level Backcountry' | handleize }}">Entry Level Backcountry</a>
-              <a
-                href="javascript:;"
-                class="dropdown-filter-link w-dropdown-link job-filter-link"
-                data-query="{{ 'Entry Level Leisure' | handleize }}">Entry Level Leisure</a>
-              <a
-                href="javascript:;"
-                class="dropdown-filter-link w-dropdown-link job-filter-link"
-                data-query="{{ 'Entry Level Government' | handleize }}">Entry Level Government</a>
-              <a
-                href="javascript:;"
-                class="dropdown-filter-link w-dropdown-link job-filter-link"
-                data-query="{{ 'Regional Airline' | handleize }}">Regional Airline</a>
-              <a
-                href="javascript:;"
-                class="dropdown-filter-link w-dropdown-link job-filter-link"
-                data-query="{{ 'Major Airline' | handleize }}">Major Airline</a>
-              <a
-                href="javascript:;"
-                class="dropdown-filter-link w-dropdown-link job-filter-link"
-                data-query="{{ 'Major Cargo' | handleize }}">Major Cargo</a>
-              <a
-                href="javascript:;"
-                class="dropdown-filter-link w-dropdown-link job-filter-link"
-                data-query="{{ 'Charter / Corporate' | handleize }}">Charter / Corporate</a>
-              <a
-                href="javascript:;"
-                class="dropdown-filter-link w-dropdown-link job-filter-link"
-                data-query="{{ 'Low Cost Airline' | handleize }}">Low Cost Airline</a>
-              <a
-                href="javascript:;"
-                class="dropdown-filter-link w-dropdown-link job-filter-link"
-                data-query="{{ 'Low Cost Cargo' | handleize }}">Low Cost Cargo</a>
-            </nav>
-          </div>
-        </div>
         <div class="job-all-wrapper">
           {% for block in section.blocks %}
             {% if block.type == 'online_job' %}
@@ -217,7 +152,10 @@
                       </div>
                     </div>
                     <div class="job-information-flex-col col-4">
-                      <a href="{{ block.settings.link }}" class="submit-button w-button">VIEW JOBS</a>
+                      <a
+                        href="{{ block.settings.link }}"
+                        class="submit-button w-button"
+                        target="_blank">VIEW JOBS</a>
                     </div>
                   </div>
                 </div>

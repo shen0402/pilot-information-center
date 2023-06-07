@@ -10,7 +10,7 @@
           id="color-filter"
           name="color-filter"
           class="filter-input-category w-select">
-          <option value="/collections/all">All</option>
+          <option value="/collections/products">All</option>
           {%- for tag in collection.all_tags -%}
             {% assign tag_handle = tag | handleize %}
             <option value="/collections/{{ collection.handle }}/{{ tag | handleize }}" {% if request.path contains tag_handle %}selected{% endif %}>{{ tag }}</option>
