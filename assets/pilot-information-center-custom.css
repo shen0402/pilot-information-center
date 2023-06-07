@@ -419,6 +419,13 @@ a {
   margin-left: 30px;
 }
 
+@media (min-width: 479px) {
+  .training-tabs .top-inner-content {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+}
+
 .main-btn {
   background-color: transparent;
   background-image: url('//cdn.shopify.com/s/files/1/0714/2922/6772/files/line-element.svg?v=1674766851');
@@ -2340,6 +2347,12 @@ body.scrolled .logo-wrapper-nav {
   color: #fff;
 }
 
+@media (min-width: 992px) {
+  .training-tabs .btn-wrapper-types {
+    padding-left: 0;
+  }
+}
+
 .btn-wrapper-types:hover {
   color: #40b6ff;
 }
@@ -2366,15 +2379,27 @@ body.scrolled .logo-wrapper-nav {
   max-height: 500px;
 }
 
+#shopify-section-educational-institutions .types-financing-backgrndimg {
+  max-height: 700px;
+}
+
 @media (max-width: 991px) {
   #shopify-section-financing-tabs .types-financing-backgrndimg {
     max-height: 530px;
+  }
+
+  #shopify-section-educational-institutions .types-financing-backgrndimg {
+    max-height: 900px;
   }
 }
 
 @media (max-width: 767px) {
   #shopify-section-financing-tabs .types-financing-backgrndimg {
     max-height: 970px;
+  }
+
+  #shopify-section-educational-institutions .types-financing-backgrndimg {
+    max-height: 1300px;
   }
 }
 
@@ -2386,6 +2411,12 @@ body.scrolled .logo-wrapper-nav {
 .exam-prep .types-financing-backgrndimg {
   background-image: url('https://cdn.shopify.com/s/files/1/0714/2922/6772/files/study-bg-min.jpg?v=1686004842');
   max-height: 1000px;
+}
+
+@media (max-width: 767px) {
+  .exam-prep .types-financing-backgrndimg {
+    max-height: 1500px;
+  }
 }
 
 .scholarship-section {
@@ -6435,8 +6466,12 @@ body.scrolled .logo-wrapper-nav {
   color: #fff;
 }
 .tabs-header {
-  text-align: left;
   color: #ffffff;
+}
+@media (max-width: 767px) {
+  .tabs-header {
+    text-align: left;
+  }
 }
 .exam-prep .w-tab-link {
   padding-left: 0;
