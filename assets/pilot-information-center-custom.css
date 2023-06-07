@@ -2362,6 +2362,22 @@ body.scrolled .logo-wrapper-nav {
   background-repeat: no-repeat;
 }
 
+#shopify-section-financing-tabs .types-financing-backgrndimg {
+  max-height: 500px;
+}
+
+@media (max-width: 991px) {
+  #shopify-section-financing-tabs .types-financing-backgrndimg {
+    max-height: 530px;
+  }
+}
+
+@media (max-width: 767px) {
+  #shopify-section-financing-tabs .types-financing-backgrndimg {
+    max-height: 970px;
+  }
+}
+
 .training-tabs .types-financing-backgrndimg {
   background-image: url('https://cdn.shopify.com/s/files/1/0714/2922/6772/files/university-bg-min.jpg?v=1686004842');
   height: 80%;
@@ -6505,4 +6521,8 @@ body.scrolled .logo-wrapper-nav {
     width: 100% !important;
     height: auto !important;
   }
+}
+
+.financial-advice-section .tight-content-wrapper h4 {
+  margin: 20px 0;
 }
