@@ -1,35 +1,51 @@
 <div class="jc-list-inline-pagination">
   {% unless paginate.previous.is_link %}
-  
-      <a href="{{ paginate.previous.url }}" class="jc-paginate-btn">
-        <
-     
-      </a>
-    
-    {% else %}
- 
-      <a href="{{ paginate.previous.url }}" class="jc-paginate-btn">
-        <
-      
-      </a>
-    
+
+    <a href="{{ paginate.previous.url }}" class="jc-paginate-btn">
+      <img
+        src="//cdn.shopify.com/s/files/1/0714/2922/6772/files/arrow-b-left.svg?v=1674766850"
+        loading="lazy"
+        alt="Leftward facing blue arrow"
+        class="slider-arrow-img">
+
+    </a>
+
+  {% else %}
+
+    <a href="{{ paginate.previous.url }}" class="jc-paginate-btn">
+      <img
+        src="//cdn.shopify.com/s/files/1/0714/2922/6772/files/arrow-b-left.svg?v=1674766850"
+        loading="lazy"
+        alt="Leftward facing blue arrow"
+        class="slider-arrow-img">
+
+    </a>
+
   {% endunless %}
   <div class="jc-pagination__text">
     {{ 'general.pagination.current_page' | t: current: paginate.current_page, total: paginate.pages }}
   </div>
   {% unless paginate.next.is_link %}
-   
-     <a href="{{ paginate.next.url }}" class="jc-paginate-btn">
-       >
-      
-     </a>
-    
+
+    <a href="{{ paginate.next.url }}" class="jc-paginate-btn">
+      <img
+        src="//cdn.shopify.com/s/files/1/0714/2922/6772/files/arrow-b.svg?v=1674766850"
+        loading="lazy"
+        alt="Rightward facing blue arrow"
+        class="slider-arrow-img">
+
+    </a>
+
   {% else %}
-    
-      <a href="{{ paginate.next.url }}" class="jc-paginate-btn">
-        >
-       
-      </a>
-    
+
+    <a href="{{ paginate.next.url }}" class="jc-paginate-btn">
+      <img
+        src="//cdn.shopify.com/s/files/1/0714/2922/6772/files/arrow-b.svg?v=1674766850"
+        loading="lazy"
+        alt="Rightward facing blue arrow"
+        class="slider-arrow-img">
+
+    </a>
+
   {% endunless %}
 </div>

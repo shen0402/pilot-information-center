@@ -48,3 +48,9 @@ $(document).on('click', '.jc-collection-secondary .resources-slide-grid-inne', f
     const link = $(this).data('link');
     window.location.href = link;
 });
+
+$(document).on('change', '.filter-input-category', function(e){
+    e.preventDefault();
+    const href = $(this).val();
+    window.location.href = href;
+});

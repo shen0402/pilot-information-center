@@ -198,20 +198,10 @@
 
 .jc-paginate-btn {
 	text-decoration: none;
-	padding-bottom: 10px;
-	padding-top:10px;
-	padding-left: 15px;
-	padding-right: 15px;
-	background-color: #000;
-	border-radius: 1px;
 	color: #fff;
 	-webkit-transition: background-color 250ms ease;
 	font-size: 22px;
-}
-
-.jc-paginate-btn:hover {
-	background-color: #000;
-
+  width: 40px;
 }
 
 .jc-pagination__text {

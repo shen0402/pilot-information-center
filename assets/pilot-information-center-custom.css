@@ -6561,3 +6561,15 @@ body.scrolled .logo-wrapper-nav {
 .financial-advice-section .tight-content-wrapper h4 {
   margin: 20px 0;
 }
+
+.sort-flex-row-shop {
+  margin: 50px 5vw 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sort-flex-row-shop .w-select {
+  margin-bottom: 5px;
+  margin-left: 20px;
+}
