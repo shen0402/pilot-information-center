@@ -7,7 +7,10 @@
       </div>
       <div class="product-grid">
         {% for block in section.blocks %}
-          <a href="{{ block.settings.link }}" class="product-grid-inner w-inline-block">
+          <a
+            href="{{ block.settings.link }}"
+            class="product-grid-inner w-inline-block"
+            target="_blank">
             <div class="product-img-wrapper"><img
                 src="{{ block.settings.image | img_url: '450x' }}"
                 loading="lazy"

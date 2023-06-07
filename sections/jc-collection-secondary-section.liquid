@@ -26,9 +26,12 @@
             <div class="resources-slide-grid-inner" data-link="{{ product_link }}">
               <div class="bright-blue-text light-text">{{ collection.title }}</div>
               <h4 class="blue-text margin-b">{{ product.title }}</h4>
-              <div class="margin-b">{{ product.description | strip_html | truncatewords: 30 }}</div>
-              <a href="{{ product_link }}" class="bright-blue-link w-inline-block">
-                <div>LEARN MORE »</div>
+              <div class="margin-b">{{ product.description }}</div>
+              <a
+                href="{{ product_link }}"
+                class="bright-blue-link w-inline-block"
+                target="_blank">
+                <div>Shop Now »</div>
               </a>
             </div>
           {% endfor %}

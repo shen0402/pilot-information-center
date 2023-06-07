@@ -2149,6 +2149,7 @@ body.scrolled .logo-wrapper-nav {
 .powered-by-logo-wrapper {
   width: 280px;
   margin-left: 20px;
+  display: block;
 }
 
 .recent-resources-section {
